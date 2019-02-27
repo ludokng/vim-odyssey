@@ -17,6 +17,7 @@
 "
 " Bootstrap {{{
 
+set termguicolors
 let s:colors = {}
 
 " }}}
@@ -52,7 +53,7 @@ function! s:hsv2hex(hue, saturation, value)
   let l:l = [float2nr(l:l[0]), float2nr(l:l[1]), float2nr(l:l[2])]
 
   let l:f = "%02x"
-  return printf(l:f, l:l[0]) . printf(l:f, l:l[0]) . printf(l:f, l:l[0])
+  return printf(l:f, l:l[0]) . printf(l:f, l:l[1]) . printf(l:f, l:l[2])
 endfunction
 
 function! s:HL(group, bg, ...)
@@ -98,6 +99,39 @@ let s:colors.constant  = s:hsv2hex(230, 45, 70)
 " This section links the different default highlight groups with their
 " associated colors. They appear in the same order than when the highlight
 " command is used.
+
+call s:HL('SpecialKey', 'background', 'warning')
+call s:HL('EndOfBuffer', 'background', 'linenumber')
+call s:HL('NonText', 'background', 'linenumber')
+call s:HL('LineNr', 'background', 'linenumber')
+call s:HL('CursorLineNr', 'cursorline', 'foreground')
+call s:HL('StatusLine', 'cursorline', 'foreground')
+call s:HL('StatusLineNC', 'beyondback', 'linenumber')
+call s:HL('VertSplit', 'beyondback', 'beyondback')
+call s:HL('Folded', 'foldedline', 'linenumber')
+call s:HL('FoldColumn', 'foldedline', 'linenumber')
+call s:HL('CursorLine', 'cursorline')
+call s:HL('ColorColumn', 'foldedline',)
+
+call s:HL('Comment', 'background', 'linenumber')
+call s:HL('Delimiter', 'background', 'foreground')
+
+call s:HL('Statement', 'background', 'keyword')
+call s:HL('Conditional', 'background', 'keyword')
+call s:HL('Identifier', 'background', 'keyword')
+call s:HL('Tag', 'background', 'warning')
+call s:HL('Special', 'background', 'warning')
+
+call s:HL('Function', 'background', 'procedure')
+
+call s:HL('Type', 'background', 'type')
+
+call s:HL('Number', 'background', 'constant')
+call s:HL('String', 'background', 'constant')
+
+call s:HL('SpecialChar', 'background', 'constant')
+call s:HL('Preproc', 'background', 'warning')
+call s:HL('Normal', 'background', 'foreground')
 
 " }}}
 " vim: foldmethod=marker

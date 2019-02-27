@@ -16,8 +16,12 @@
 " License: MIT
 "
 " Bootstrap {{{
+
+let s:colors = {}
+
 " }}}
 " Utilities {{{
+
 function! s:hsv2hex(hue, saturation, value)
   let l:s = a:saturation / 100.0
   let l:v = a:value / 100.0
@@ -63,9 +67,37 @@ function! s:HL(group, bg, ...)
   let histring .= ' cterm=none'
   execute histring
 endfunction
+
 " }}}
 " Colors {{{
+"
+" This section deals with the initialization of the different colors used by
+" the colorscheme. Odyssey is going to use a 12-colors palette. The will be 6
+" colors for the different part of the editor, and 6 colors for the
+" highligting.
+"
+" The s:colors dictionary is initialized in the Bootstrap section.
+
+let s:colors.beyondback = s:hsv2hex(177, 20,  6)
+let s:colors.background = s:hsv2hex(177, 20, 11)
+let s:colors.cursorline = s:hsv2hex(177, 25, 16)
+let s:colors.foldedline = s:hsv2hex(177, 25, 21)
+let s:colors.linenumber = s:hsv2hex(177,  9, 55)
+let s:colors.foreground = s:hsv2hex(177, 11, 70)
+
+let s:colors.keyword   = s:hsv2hex(170, 45, 70)
+let s:colors.error     = s:hsv2hex(  0, 45, 70)
+let s:colors.warning   = s:hsv2hex( 30, 45, 70)
+let s:colors.procedure = s:hsv2hex(140, 45, 70)
+let s:colors.type      = s:hsv2hex(200, 45, 70)
+let s:colors.constant  = s:hsv2hex(230, 45, 70)
+
 " }}}
-" Highlight Groups {{{
+" Default Highlights {{{
+"
+" This section links the different default highlight groups with their
+" associated colors. They appear in the same order than when the highlight
+" command is used.
+
 " }}}
 " vim: foldmethod=marker

@@ -12,7 +12,7 @@
 " This link to the sea is the reason why that colorscheme is named after the
 " Odyssey.
 "
-" Author: Ludovic Koenig <ludovic.koenig@gmail.com>
+" Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
 " License: MIT
 "
 " Bootstrap {{{
@@ -84,7 +84,7 @@ let s:colors.background = s:hsv2hex(177, 20, 11)
 let s:colors.cursorline = s:hsv2hex(177, 25, 16)
 let s:colors.foldedline = s:hsv2hex(177, 25, 21)
 let s:colors.linenumber = s:hsv2hex(177,  9, 55)
-let s:colors.foreground = s:hsv2hex(177, 11, 70)
+let s:colors.foreground = s:hsv2hex(177, 11, 80)
 
 let s:colors.keyword   = s:hsv2hex(170, 45, 70)
 let s:colors.error     = s:hsv2hex(  0, 45, 70)
@@ -100,38 +100,37 @@ let s:colors.constant  = s:hsv2hex(230, 45, 70)
 " associated colors. They appear in the same order than when the highlight
 " command is used.
 
-call s:HL('SpecialKey', 'background', 'warning')
-call s:HL('EndOfBuffer', 'background', 'linenumber')
-call s:HL('NonText', 'background', 'linenumber')
-call s:HL('LineNr', 'background', 'linenumber')
+call s:HL(  'SpecialKey', 'background',    'warning')
+call s:HL( 'EndOfBuffer', 'background', 'linenumber')
+call s:HL(     'NonText', 'background', 'linenumber')
+call s:HL(    'ErrorMsg', 'background', 'linenumber')
+call s:HL(   'IncSearch', 'foreground', 'background')
+call s:HL(      'Search', 'linenumber', 'background')
+call s:HL(      'LineNr', 'background', 'linenumber')
 call s:HL('CursorLineNr', 'cursorline', 'foreground')
-call s:HL('StatusLine', 'cursorline', 'foreground')
+call s:HL(  'StatusLine', 'cursorline', 'foreground')
 call s:HL('StatusLineNC', 'beyondback', 'linenumber')
-call s:HL('VertSplit', 'beyondback', 'beyondback')
-call s:HL('Folded', 'foldedline', 'linenumber')
-call s:HL('FoldColumn', 'foldedline', 'linenumber')
-call s:HL('CursorLine', 'cursorline')
-call s:HL('ColorColumn', 'foldedline',)
-
-call s:HL('Comment', 'background', 'linenumber')
-call s:HL('Delimiter', 'background', 'foreground')
-
-call s:HL('Statement', 'background', 'keyword')
-call s:HL('Conditional', 'background', 'keyword')
-call s:HL('Identifier', 'background', 'keyword')
-call s:HL('Tag', 'background', 'warning')
-call s:HL('Special', 'background', 'warning')
-
-call s:HL('Function', 'background', 'procedure')
-
-call s:HL('Type', 'background', 'type')
-
-call s:HL('Number', 'background', 'constant')
-call s:HL('String', 'background', 'constant')
-
-call s:HL('SpecialChar', 'background', 'constant')
-call s:HL('Preproc', 'background', 'warning')
-call s:HL('Normal', 'background', 'foreground')
+call s:HL(   'VertSplit', 'beyondback', 'beyondback')
+call s:HL(      'Folded', 'foldedline', 'linenumber')
+call s:HL(  'FoldColumn', 'foldedline', 'linenumber')
+call s:HL(  'CursorLine', 'cursorline')
+call s:HL( 'ColorColumn', 'foldedline')
+call s:HL(  'MatchParen', 'linenumber', 'background')
+call s:HL(     'Comment', 'background', 'linenumber')
+call s:HL(    'Constant', 'background',   'constant')
+call s:HL(     'Special', 'background',    'warning')
+call s:HL(  'Identifier', 'background',    'keyword')
+call s:HL(   'Statement', 'background',    'keyword')
+call s:HL(     'Preproc', 'background',    'warning')
+call s:HL(        'Type', 'background',       'type')
+call s:HL(      'String', 'background',   'constant')
+call s:HL(      'Number', 'background',   'constant')
+call s:HL(    'Function', 'background',  'procedure')
+call s:HL( 'Conditional', 'background',    'keyword')
+call s:HL(         'Tag', 'background',    'warning')
+call s:HL( 'SpecialChar', 'background',   'constant')
+call s:HL(   'Delimiter', 'background', 'foreground')
+call s:HL(      'Normal', 'background', 'foreground')
 
 " }}}
 " vim: foldmethod=marker

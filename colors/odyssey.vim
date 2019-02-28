@@ -84,7 +84,7 @@ let s:colors.background = s:hsv2hex(177, 20, 11)
 let s:colors.cursorline = s:hsv2hex(177, 25, 16)
 let s:colors.foldedline = s:hsv2hex(177, 25, 21)
 let s:colors.linenumber = s:hsv2hex(177,  9, 55)
-let s:colors.foreground = s:hsv2hex(177, 11, 80)
+let s:colors.foreground = s:hsv2hex(177, 11, 75)
 
 let s:colors.keyword   = s:hsv2hex(170, 45, 70)
 let s:colors.error     = s:hsv2hex(  0, 45, 70)

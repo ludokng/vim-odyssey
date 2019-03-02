@@ -18,7 +18,6 @@
 " Bootstrap {{{
 
 " TODO Improve the bootstrap process ;-)
-set termguicolors
 let s:colors = {}
 
 " }}}

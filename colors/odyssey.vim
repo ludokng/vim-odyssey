@@ -140,8 +140,8 @@ call s:HL(       'SpellRare', 'background',   'constant', 'underline')
 call s:HL(      'SpellLocal', 'background',    'keyword', 'underline')
 call s:HL(           'Pmenu', 'foldedline', 'linenumber')
 call s:HL(        'PmenuSel', 'foreground', 'background')
-call s:HL(       'PmenuSbar', 'beyondback', 'linenumber') " TODO Use a GUI ?
-call s:HL(      'PmenuThumb', 'beyondback', 'linenumber') " TODO Use a GUI ?
+call s:HL(       'PmenuSbar', 'foldedline', 'foldedline')
+call s:HL(      'PmenuThumb', 'linenumber', 'linenumber')
 call s:HL(         'TabLine', 'background', 'linenumber')
 call s:HL(      'TabLineSel', 'background', 'foreground')
 call s:HL(     'TabLineFill', 'beyondback', 'linenumber')

@@ -15,10 +15,24 @@
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
 " License: MIT
 "
-" Bootstrap {{{
+" Initialisation {{{
 
-" TODO Improve the bootstrap process ;-)
-set termguicolors
+if !(has('termguicolors') && &termguicolors) && !has('gui_running')
+  finish
+endif
+
+if v:version > 580
+  set background=dark
+  highlight clear
+  if exists('syntax_on')
+    syntax reset
+  endif
+else
+  finish
+endif
+
+let g:colors_name = 'odyssey'
+
 let s:colors = {}
 
 " }}}

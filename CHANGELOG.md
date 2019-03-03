@@ -32,6 +32,11 @@ project adheres to [Semantic Versioning].
     and it must be set on. In other words, the color scheme must be used as
     followed.
 
+  ```vim
+  set termguicolors
+  colorscheme odyssey
+  ```
+
   + A ISO-8613-3 compatible terminal is required.
 
   + Otherwise, a GUI version of Vim must be used.

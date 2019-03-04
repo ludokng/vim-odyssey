@@ -76,11 +76,11 @@ endfunction
 function! s:HL(group, bg, ...)
   let histring = 'highlight ' . a:group . ' '
   let cbg = get(s:colors, a:bg)
-  let histring .= 'guibg=#'. cbg[0] . ' ' . 'ctermbg=' . cbg[1]
+  let histring .= 'guibg=#'. cbg['gui'] . ' ' . 'ctermbg=' . cbg['term']
 
   if a:0 > 0
     let cfg = get(s:colors, a:1)
-    let histring .= ' guifg=#'. cfg[0] . ' ' . 'ctermfg=' . cfg[1]
+    let histring .= ' guifg=#'. cfg['gui'] . ' ' . 'ctermfg=' . cfg['term']
   endif
 
   if a:0 > 1
@@ -102,19 +102,19 @@ endfunction
 "
 " The s:colors dictionary is initialized in the Bootstrap section.
 
-let s:colors.beyondback = [s:hsv2hex(177, 20,  6), '233']
-let s:colors.background = [s:hsv2hex(177, 20, 11), '234']
-let s:colors.cursorline = [s:hsv2hex(177, 25, 16), '235']
-let s:colors.foldedline = [s:hsv2hex(177, 25, 21), '236']
-let s:colors.linenumber = [s:hsv2hex(177,  9, 55), '245']
-let s:colors.foreground = [s:hsv2hex(177, 11, 75), '250']
+let s:colors.beyondback = {'gui': s:hsv2hex(177, 20,  6), 'term': '233'}
+let s:colors.background = {'gui': s:hsv2hex(177, 20, 11), 'term': '234'}
+let s:colors.cursorline = {'gui': s:hsv2hex(177, 25, 16), 'term': '235'}
+let s:colors.foldedline = {'gui': s:hsv2hex(177, 25, 21), 'term': '236'}
+let s:colors.linenumber = {'gui': s:hsv2hex(177,  9, 55), 'term': '245'}
+let s:colors.foreground = {'gui': s:hsv2hex(177, 11, 75), 'term': '250'}
 
-let s:colors.keyword   = [s:hsv2hex(170, 45, 70),  '73']
-let s:colors.error     = [s:hsv2hex(  0, 45, 70), '131']
-let s:colors.warning   = [s:hsv2hex( 30, 45, 70), '143']
-let s:colors.procedure = [s:hsv2hex(140, 45, 70),  '72']
-let s:colors.type      = [s:hsv2hex(200, 45, 70),  '67']
-let s:colors.constant  = [s:hsv2hex(230, 45, 70),  '61']
+let s:colors.keyword    = {'gui': s:hsv2hex(170, 45, 70), 'term':  '73'}
+let s:colors.error      = {'gui': s:hsv2hex(  0, 45, 70), 'term': '131'}
+let s:colors.warning    = {'gui': s:hsv2hex( 30, 45, 70), 'term': '143'}
+let s:colors.procedure  = {'gui': s:hsv2hex(140, 45, 70), 'term':  '72'}
+let s:colors.type       = {'gui': s:hsv2hex(200, 45, 70), 'term':  '67'}
+let s:colors.constant   = {'gui': s:hsv2hex(230, 45, 70), 'term':  '61'}
 
 " }}}
 " Default Highlights {{{

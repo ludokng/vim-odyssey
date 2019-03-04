@@ -21,7 +21,7 @@ project adheres to [Semantic Versioning].
   | #aabfbe |      'foreground' | 177 |     11     |   75  |
   | #62b3a5 |           Keyword | 170 |     45     |   70  |
   | #b36262 |          ErrorMsg |   0 |     45     |   70  |
-  | #b3a862 |        WarningMsg |  30 |     45     |   70  |
+  | #b38a62 |        WarningMsg |  30 |     45     |   70  |
   | #62b37d |          Function | 140 |     45     |   70  |
   | #6298b3 |              Type | 200 |     45     |   70  |
   | #6270b3 |          Constant | 230 |     45     |   70  |

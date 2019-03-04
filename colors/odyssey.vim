@@ -111,7 +111,7 @@ let s:colors.foreground = {'gui': s:hsv2hex(177, 11, 75), 'term': '250'}
 
 let s:colors.keyword    = {'gui': s:hsv2hex(170, 45, 70), 'term':  '73'}
 let s:colors.error      = {'gui': s:hsv2hex(  0, 45, 70), 'term': '131'}
-let s:colors.warning    = {'gui': s:hsv2hex( 30, 45, 70), 'term': '143'}
+let s:colors.warning    = {'gui': s:hsv2hex( 30, 45, 70), 'term': '137'}
 let s:colors.procedure  = {'gui': s:hsv2hex(140, 45, 70), 'term':  '72'}
 let s:colors.type       = {'gui': s:hsv2hex(200, 45, 70), 'term':  '67'}
 let s:colors.constant   = {'gui': s:hsv2hex(230, 45, 70), 'term':  '61'}

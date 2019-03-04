@@ -14,7 +14,6 @@
 "
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
 " License: MIT
-"
 " Initialisation {{{
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
@@ -165,8 +164,8 @@ call s:HL(     'ColorColumn', 'foldedline')
 call s:HL(  'StatusLineTerm', 'cursorline', 'foreground')
 call s:HL('StatusLineTermNC', 'beyondback', 'linenumber')
 call s:HL(      'MatchParen', 'linenumber', 'background')
-"call s:HL(     'ToolbarLine', 'background', 'linenumber') " TODO Use a GUI
-"call s:HL(   'ToolbarButton', 'background', 'linenumber') " TODO Use a GUI
+call s:HL(     'ToolbarLine', 'linenumber', 'linenumber')
+call s:HL(   'ToolbarButton', 'linenumber', 'background')
 call s:HL(         'Comment', 'background', 'linenumber')
 call s:HL(        'Constant', 'background',   'constant')
 call s:HL(         'Special', 'background',    'warning')

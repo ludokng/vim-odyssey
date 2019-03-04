@@ -17,8 +17,10 @@
 "
 " Initialisation {{{
 
-if !(has('termguicolors') && &termguicolors) && !has('gui_running')
-  finish
+if !has('gui_running')
+  if !(has('termguicolors') && &termguicolors) && &t_Co != 256
+    finish
+  endif
 endif
 
 if v:version > 580
@@ -72,12 +74,13 @@ function! s:hsv2hex(hue, saturation, value)
 endfunction
 
 function! s:HL(group, bg, ...)
+  let histring = 'highlight ' . a:group . ' '
   let cbg = get(s:colors, a:bg)
-  let histring = 'highlight ' . a:group . ' ' . 'guibg=#'. cbg
+  let histring .= 'guibg=#'. cbg[0] . ' ' . 'ctermbg=' . cbg[1]
 
   if a:0 > 0
     let cfg = get(s:colors, a:1)
-    let histring .= ' guifg=#'. cfg
+    let histring .= ' guifg=#'. cfg[0] . ' ' . 'ctermfg=' . cfg[1]
   endif
 
   if a:0 > 1
@@ -99,19 +102,19 @@ endfunction
 "
 " The s:colors dictionary is initialized in the Bootstrap section.
 
-let s:colors.beyondback = s:hsv2hex(177, 20,  6)
-let s:colors.background = s:hsv2hex(177, 20, 11)
-let s:colors.cursorline = s:hsv2hex(177, 25, 16)
-let s:colors.foldedline = s:hsv2hex(177, 25, 21)
-let s:colors.linenumber = s:hsv2hex(177,  9, 55)
-let s:colors.foreground = s:hsv2hex(177, 11, 75)
+let s:colors.beyondback = [s:hsv2hex(177, 20,  6), '233']
+let s:colors.background = [s:hsv2hex(177, 20, 11), '234']
+let s:colors.cursorline = [s:hsv2hex(177, 25, 16), '235']
+let s:colors.foldedline = [s:hsv2hex(177, 25, 21), '236']
+let s:colors.linenumber = [s:hsv2hex(177,  9, 55), '245']
+let s:colors.foreground = [s:hsv2hex(177, 11, 75), '250']
 
-let s:colors.keyword   = s:hsv2hex(170, 45, 70)
-let s:colors.error     = s:hsv2hex(  0, 45, 70)
-let s:colors.warning   = s:hsv2hex( 30, 45, 70)
-let s:colors.procedure = s:hsv2hex(140, 45, 70)
-let s:colors.type      = s:hsv2hex(200, 45, 70)
-let s:colors.constant  = s:hsv2hex(230, 45, 70)
+let s:colors.keyword   = [s:hsv2hex(170, 45, 70),  '73']
+let s:colors.error     = [s:hsv2hex(  0, 45, 70), '131']
+let s:colors.warning   = [s:hsv2hex( 30, 45, 70), '143']
+let s:colors.procedure = [s:hsv2hex(140, 45, 70),  '72']
+let s:colors.type      = [s:hsv2hex(200, 45, 70),  '67']
+let s:colors.constant  = [s:hsv2hex(230, 45, 70),  '61']
 
 " }}}
 " Default Highlights {{{

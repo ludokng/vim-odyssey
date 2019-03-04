@@ -14,6 +14,7 @@
 "
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
 " License: MIT
+" Release: 0.1.0
 " Initialisation {{{
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')

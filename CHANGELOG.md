@@ -7,7 +7,8 @@ project adheres to [Semantic Versioning].
 ### Added
 
 - Add the majority of the default highlight groups for the syntax and for the
-  editor.
+  editor. The default highlight groups are the ones used for all syntax
+  languages.
 
 - Add the 12-color palette of the Odyssey color scheme.
 

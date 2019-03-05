@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
 
+# [Unreleased]
+
+### Changed
+
+- The highlight for MatchParen has been modified. In fact, when the cursor is
+  over a parenthese, a bracket, a brace, and so on, the matching element turns
+  'orange' and is underlined.
+
+  This may solves the problem of the disappearing cursor in some terminals when
+  it is over a parenthese, bracket or brace.
+
 ## 0.1.0 - 2019-03-04
 
 ### Added
@@ -41,4 +52,5 @@ project adheres to [Semantic Versioning].
 
   + Otherwise, a GUI version of Vim must be used.
 
+[Unreleased]: https://github.com/ludokng/vim-odyssey/compare/0.1.0...HEAD
 [Semantic Versioning]: https://semver.org/spec/v2.0.0.html

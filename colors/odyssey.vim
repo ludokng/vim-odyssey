@@ -35,10 +35,10 @@ endif
 
 let g:colors_name = 'odyssey'
 
-let s:colors = {}
-
 " }}}
-" Utilities {{{
+" Color Utilities {{{
+
+let s:colors = {}
 
 function! s:hsv2hex(hue, saturation, value)
   let l:s = a:saturation / 100.0
@@ -73,25 +73,6 @@ function! s:hsv2hex(hue, saturation, value)
   return printf(l:f, l:l[0]) . printf(l:f, l:l[1]) . printf(l:f, l:l[2])
 endfunction
 
-function! s:HL(group, bg, ...)
-  let histring = 'highlight ' . a:group . ' '
-  let cbg = get(s:colors, a:bg)
-  let histring .= 'guibg=#'. cbg['gui'] . ' ' . 'ctermbg=' . cbg['term']
-
-  if a:0 > 0
-    let cfg = get(s:colors, a:1)
-    let histring .= ' guifg=#'. cfg['gui'] . ' ' . 'ctermfg=' . cfg['term']
-  endif
-
-  if a:0 > 1
-    let histring .= ' cterm=' . a:2
-  else
-    let histring .= ' cterm=none'
-  endif
-
-  execute histring
-endfunction
-
 " }}}
 " Colors {{{
 "
@@ -115,6 +96,28 @@ let s:colors.warning    = {'gui': s:hsv2hex( 30, 45, 70), 'term': '137'}
 let s:colors.procedure  = {'gui': s:hsv2hex(140, 45, 70), 'term':  '72'}
 let s:colors.type       = {'gui': s:hsv2hex(200, 45, 70), 'term':  '67'}
 let s:colors.constant   = {'gui': s:hsv2hex(230, 45, 70), 'term':  '61'}
+
+" }}}
+" Highlight Utilities {{{
+
+function! s:HL(group, bg, ...)
+  let histring = 'highlight ' . a:group . ' '
+  let cbg = get(s:colors, a:bg)
+  let histring .= 'guibg=#'. cbg['gui'] . ' ' . 'ctermbg=' . cbg['term']
+
+  if a:0 > 0
+    let cfg = get(s:colors, a:1)
+    let histring .= ' guifg=#'. cfg['gui'] . ' ' . 'ctermfg=' . cfg['term']
+  endif
+
+  if a:0 > 1
+    let histring .= ' cterm=' . a:2
+  else
+    let histring .= ' cterm=none'
+  endif
+
+  execute histring
+endfunction
 
 " }}}
 " Default Highlights {{{

@@ -40,7 +40,7 @@ let g:colors_name = 'odyssey'
 
 let s:colors = {}
 
-function! s:hsv2hex(hue, saturation, value)
+function! s:hsv2rgb(hue, saturation, value)
   let l:s = a:saturation / 100.0
   let l:v = a:value / 100.0
 
@@ -69,8 +69,16 @@ function! s:hsv2hex(hue, saturation, value)
   let l:l = [round(l:l[0]), round(l:l[1]), round(l:l[2])]
   let l:l = [float2nr(l:l[0]), float2nr(l:l[1]), float2nr(l:l[2])]
 
+  return l:l
+endfunction
+
+function! s:rgb2hex(rgb)
   let l:f = "%02x"
-  return printf(l:f, l:l[0]) . printf(l:f, l:l[1]) . printf(l:f, l:l[2])
+  return printf(l:f, a:rgb[0]) . printf(l:f, a:rgb[1]) . printf(l:f, a:rgb[2])
+endfunction
+
+function! s:colorize(hue, saturation, value)
+  return s:rgb2hex(s:hsv2rgb(a:hue, a:saturation, a:value))
 endfunction
 
 " }}}
@@ -83,19 +91,19 @@ endfunction
 "
 " The s:colors dictionary is initialized in the Bootstrap section.
 
-let s:colors.beyondback = {'gui': s:hsv2hex(177, 20,  6), 'term': '233'}
-let s:colors.background = {'gui': s:hsv2hex(177, 20, 11), 'term': '234'}
-let s:colors.cursorline = {'gui': s:hsv2hex(177, 25, 16), 'term': '235'}
-let s:colors.foldedline = {'gui': s:hsv2hex(177, 25, 21), 'term': '236'}
-let s:colors.linenumber = {'gui': s:hsv2hex(177,  9, 55), 'term': '245'}
-let s:colors.foreground = {'gui': s:hsv2hex(177, 11, 75), 'term': '250'}
+let s:colors.beyondback = {'gui': s:colorize(177, 20,  6), 'term': '233'}
+let s:colors.background = {'gui': s:colorize(177, 20, 11), 'term': '234'}
+let s:colors.cursorline = {'gui': s:colorize(177, 25, 16), 'term': '235'}
+let s:colors.foldedline = {'gui': s:colorize(177, 25, 21), 'term': '236'}
+let s:colors.linenumber = {'gui': s:colorize(177,  9, 55), 'term': '245'}
+let s:colors.foreground = {'gui': s:colorize(177, 11, 75), 'term': '250'}
 
-let s:colors.keyword    = {'gui': s:hsv2hex(170, 45, 70), 'term':  '73'}
-let s:colors.error      = {'gui': s:hsv2hex(  0, 45, 70), 'term': '131'}
-let s:colors.warning    = {'gui': s:hsv2hex( 30, 45, 70), 'term': '137'}
-let s:colors.procedure  = {'gui': s:hsv2hex(140, 45, 70), 'term':  '72'}
-let s:colors.type       = {'gui': s:hsv2hex(200, 45, 70), 'term':  '67'}
-let s:colors.constant   = {'gui': s:hsv2hex(230, 45, 70), 'term':  '61'}
+let s:colors.keyword    = {'gui': s:colorize(170, 45, 70), 'term':  '73'}
+let s:colors.error      = {'gui': s:colorize(  0, 45, 70), 'term': '131'}
+let s:colors.warning    = {'gui': s:colorize( 30, 45, 70), 'term': '137'}
+let s:colors.procedure  = {'gui': s:colorize(140, 45, 70), 'term':  '72'}
+let s:colors.type       = {'gui': s:colorize(200, 45, 70), 'term':  '67'}
+let s:colors.constant   = {'gui': s:colorize(230, 45, 70), 'term':  '61'}
 
 " }}}
 " Highlight Utilities {{{

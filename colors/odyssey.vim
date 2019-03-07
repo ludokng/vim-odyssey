@@ -35,12 +35,10 @@ endif
 
 let g:colors_name = 'odyssey'
 
-let s:colors = {}
-
 " }}}
-" Utilities {{{
+" Color Utilities {{{
 
-function! s:hsv2hex(hue, saturation, value)
+function! s:hsv2rgb(hue, saturation, value)
   let l:s = a:saturation / 100.0
   let l:v = a:value / 100.0
 
@@ -69,27 +67,52 @@ function! s:hsv2hex(hue, saturation, value)
   let l:l = [round(l:l[0]), round(l:l[1]), round(l:l[2])]
   let l:l = [float2nr(l:l[0]), float2nr(l:l[1]), float2nr(l:l[2])]
 
-  let l:f = "%02x"
-  return printf(l:f, l:l[0]) . printf(l:f, l:l[1]) . printf(l:f, l:l[2])
+  return l:l
 endfunction
 
-function! s:HL(group, bg, ...)
-  let histring = 'highlight ' . a:group . ' '
-  let cbg = get(s:colors, a:bg)
-  let histring .= 'guibg=#'. cbg['gui'] . ' ' . 'ctermbg=' . cbg['term']
+function! s:rgb2hex(rgb)
+  let l:f = "%02x"
+  return printf(l:f, a:rgb[0]) . printf(l:f, a:rgb[1]) . printf(l:f, a:rgb[2])
+endfunction
 
-  if a:0 > 0
-    let cfg = get(s:colors, a:1)
-    let histring .= ' guifg=#'. cfg['gui'] . ' ' . 'ctermfg=' . cfg['term']
-  endif
+function! s:rgb2short(rgb)
+  " 216 colors + 24 greys = 240 total ( - 16 because ignoring system color )
+  function! s:xterm2rgb(key, val)
+    let l:incs = [0, 95, 135, 175, 215, 255]
 
-  if a:0 > 1
-    let histring .= ' cterm=' . a:2
-  else
-    let histring .= ' cterm=none'
-  endif
+    if a:val < 216
+      return [l:incs[a:val / 36], l:incs[(a:val % 36) / 6], l:incs[a:val % 6]]
+    else
+      let l:coordinate = a:val * 10 - 2152
+      return [l:coordinate, l:coordinate, l:coordinate]
+    endif
+  endfunction
 
-  execute histring
+  function! s:distance(lhs, rhs)
+    return abs(a:lhs[0] - a:rhs[0])
+          \ + abs(a:lhs[1] - a:rhs[1])
+          \ + abs(a:lhs[2] - a:rhs[2])
+  endfunction
+
+  let l:xterm = range(0, 239)
+  let l:xterm = map(l:xterm, function('s:xterm2rgb'))
+
+  let l:distances = []
+  for l:value in l:xterm
+    let l:distances += [s:distance(l:value, a:rgb)]
+  endfor
+
+  let l:index = index(l:distances, min(l:distances)) + 16
+
+  return printf("%s", l:index)
+endfunction
+
+function! s:colorize(hue, saturation, value)
+  let l:rgb = s:hsv2rgb(a:hue, a:saturation, a:value)
+  let l:gui = s:rgb2hex(l:rgb)
+  let l:cterm = s:rgb2short(l:rgb)
+  let l:res = {'gui': l:gui, 'cterm': l:cterm}
+  return l:res
 endfunction
 
 " }}}
@@ -102,19 +125,43 @@ endfunction
 "
 " The s:colors dictionary is initialized in the Bootstrap section.
 
-let s:colors.beyondback = {'gui': s:hsv2hex(177, 20,  6), 'term': '233'}
-let s:colors.background = {'gui': s:hsv2hex(177, 20, 11), 'term': '234'}
-let s:colors.cursorline = {'gui': s:hsv2hex(177, 25, 16), 'term': '235'}
-let s:colors.foldedline = {'gui': s:hsv2hex(177, 25, 21), 'term': '236'}
-let s:colors.linenumber = {'gui': s:hsv2hex(177,  9, 55), 'term': '245'}
-let s:colors.foreground = {'gui': s:hsv2hex(177, 11, 75), 'term': '250'}
+let s:colors = {}
 
-let s:colors.keyword    = {'gui': s:hsv2hex(170, 45, 70), 'term':  '73'}
-let s:colors.error      = {'gui': s:hsv2hex(  0, 45, 70), 'term': '131'}
-let s:colors.warning    = {'gui': s:hsv2hex( 30, 45, 70), 'term': '137'}
-let s:colors.procedure  = {'gui': s:hsv2hex(140, 45, 70), 'term':  '72'}
-let s:colors.type       = {'gui': s:hsv2hex(200, 45, 70), 'term':  '67'}
-let s:colors.constant   = {'gui': s:hsv2hex(230, 45, 70), 'term':  '61'}
+let s:colors.beyondback = s:colorize(177, 20,  6)
+let s:colors.background = s:colorize(177, 20, 11)
+let s:colors.cursorline = s:colorize(177, 25, 16)
+let s:colors.foldedline = s:colorize(177, 25, 21)
+let s:colors.linenumber = s:colorize(177,  9, 55)
+let s:colors.foreground = s:colorize(177, 11, 75)
+
+let s:colors.keyword    = s:colorize(170, 45, 70)
+let s:colors.error      = s:colorize(  0, 45, 70)
+let s:colors.warning    = s:colorize( 30, 45, 70)
+let s:colors.procedure  = s:colorize(140, 45, 70)
+let s:colors.type       = s:colorize(200, 45, 70)
+let s:colors.constant   = s:colorize(230, 45, 70)
+
+" }}}
+" Highlight Utilities {{{
+
+function! s:HL(group, bg, ...)
+  let histring = 'highlight ' . a:group . ' '
+  let cbg = get(s:colors, a:bg)
+  let histring .= 'guibg=#'. cbg['gui'] . ' ' . 'ctermbg=' . cbg['cterm']
+
+  if a:0 > 0
+    let cfg = get(s:colors, a:1)
+    let histring .= ' guifg=#'. cfg['gui'] . ' ' . 'ctermfg=' . cfg['cterm']
+  endif
+
+  if a:0 > 1
+    let histring .= ' cterm=' . a:2
+  else
+    let histring .= ' cterm=none'
+  endif
+
+  execute histring
+endfunction
 
 " }}}
 " Default Highlights {{{

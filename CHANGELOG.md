@@ -6,6 +6,17 @@ project adheres to [Semantic Versioning].
 
 ### Changed
 
+- The color named violet associated to the constants has been changed because
+  in some it was difficult to read (Number composed of one digit, for example).
+  A more yellowish color is now used.
+
+  The violet color is removed, and the yellow color is added.
+
+  |  Color  |    Name    |     Main usage    | Hue | Saturation | Value |
+  | ------- | ---------- | ----------------- | --- | ---------- | ----- |
+  | #8ab362 |    yellow  |          Constant |  90 |     45     |   70  |
+  | #6270b3 | ~~violet~~ |          Constant | 230 |     45     |   70  |
+
 - The highlight for MatchParen has been modified. In fact, when the cursor is
   over a parenthese, a bracket, a brace, and so on, the matching element turns
   'orange' and is underlined.

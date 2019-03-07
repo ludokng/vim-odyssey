@@ -139,7 +139,7 @@ let s:colors.error      = s:colorize(  0, 45, 70)
 let s:colors.warning    = s:colorize( 30, 45, 70)
 let s:colors.procedure  = s:colorize(140, 45, 70)
 let s:colors.type       = s:colorize(200, 45, 70)
-let s:colors.constant   = s:colorize(230, 45, 70)
+let s:colors.constant   = s:colorize( 90, 45, 70)
 
 " }}}
 " Highlight Utilities {{{

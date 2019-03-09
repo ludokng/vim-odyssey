@@ -2,7 +2,28 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
 
-# [Unreleased]
+## [0.2.0] - 2019-03-09
+
+### Added
+
+- Add support for 256-colors terminal.
+
+  + If 8-bits colors are required, the following must be used in `.vimrc`:
+
+    ```vim
+    set termguicolors
+    colorscheme odyssey
+    ```
+
+  + If 24-bits colors are required, the following must be used `.vimrc`:
+
+    ```vim
+    set t_Co=256
+    colorscheme odyssey
+    ```
+
+- Add the highlight for the default syntax group names Cursor and lCursor.
+  Those are basically the opposite of Normal.
 
 ### Changed
 
@@ -12,10 +33,10 @@ project adheres to [Semantic Versioning].
 
   The violet color is removed, and the yellow-green color is added.
 
-  |  Color  |       Name       |     Main usage    | Hue | Saturation | Value |
-  | ------- | ---------------- | ----------------- | --- | ---------- | ----- |
-  | #8ab362 |    yellow-green  |          Constant | 110 |     45     |   70  |
-  | #6270b3 |       ~~violet~~ |          Constant | 230 |     45     |   70  |
+  |    Color    |    Name    |     Main usage    | Hue | Saturation | Value |
+  | ----------- | ---------- | ----------------- | --- | ---------- | ----- |
+  |     #add590 |     yellow |          Constant |  95 |     45     |   70  |
+  | ~~#6270b3~~ | ~~violet~~ |          Constant | 230 |     45     |   70  |
 
 - The highlight for MatchParen has been modified. In fact, when the cursor is
   over a parenthese, a bracket, a brace, and so on, the matching element turns
@@ -54,14 +75,15 @@ project adheres to [Semantic Versioning].
     and it must be set on. In other words, the color scheme must be used as
     followed.
 
-  ```vim
-  set termguicolors
-  colorscheme odyssey
-  ```
+    ```vim
+    set termguicolors
+    colorscheme odyssey
+    ```
 
   + A ISO-8613-3 compatible terminal is required.
 
   + Otherwise, a GUI version of Vim must be used.
 
-[Unreleased]: https://github.com/ludokng/vim-odyssey/compare/0.1.0...HEAD
+[Unreleased]: https://github.com/ludokng/vim-odyssey/compare/0.2.0...HEAD
+[0.2.0]: https://github.com/ludokng/vim-odyssey/compare/0.1.0...0.2.0
 [Semantic Versioning]: https://semver.org/spec/v2.0.0.html

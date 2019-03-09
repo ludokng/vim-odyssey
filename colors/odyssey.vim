@@ -14,7 +14,7 @@
 "
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
 " License: MIT
-" Release: 0.1.0
+" Release: 0.2.0
 " Initialisation {{{
 
 if !has('gui_running')
@@ -139,7 +139,7 @@ let s:colors.error      = s:colorize(  0, 45, 70)
 let s:colors.warning    = s:colorize( 30, 45, 70)
 let s:colors.procedure  = s:colorize(140, 45, 70)
 let s:colors.type       = s:colorize(200, 45, 70)
-let s:colors.constant   = s:colorize(110, 45, 70)
+let s:colors.constant   = s:colorize( 95, 45, 70)
 
 " }}}
 " Highlight Utilities {{{

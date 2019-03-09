@@ -27,10 +27,20 @@ After having installed [pathogen.vim], clone the repository under
 ### Updating the `./vimrc`
 
 Add the following to the `./vimrc` file.
-  ```vim
-  set termguicolor
-  colorscheme odyssey
-  ```
+
+  + If 256-colors are required, the following lines must be used:
+
+    ```vim
+    set termguicolors
+    colorscheme odyssey
+    ```
+
+  + If 24-bits colors are required, the following lines must be used:
+
+    ```vim
+    set t_Co=256
+    colorscheme odyssey
+    ```
 
 ## License
 

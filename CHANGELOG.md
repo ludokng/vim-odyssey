@@ -8,7 +8,7 @@ project adheres to [Semantic Versioning].
 
 - Add support for 256-colors terminal.
 
-  + If 256-colors are required, the following must be used in `.vimrc`:
+  + If 8-bits colors are required, the following must be used in `.vimrc`:
 
     ```vim
     set termguicolors

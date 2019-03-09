@@ -134,12 +134,12 @@ let s:colors.foldedline = s:colorize(177, 25, 21)
 let s:colors.linenumber = s:colorize(177,  9, 55)
 let s:colors.foreground = s:colorize(177, 11, 75)
 
-let s:colors.keyword    = s:colorize(170, 45, 70)
 let s:colors.error      = s:colorize(  0, 45, 70)
 let s:colors.warning    = s:colorize( 30, 45, 70)
+let s:colors.type       = s:colorize( 70, 45, 70)
 let s:colors.procedure  = s:colorize(140, 45, 70)
-let s:colors.type       = s:colorize(200, 45, 70)
-let s:colors.constant   = s:colorize( 95, 45, 70)
+let s:colors.keyword    = s:colorize(180, 45, 70)
+let s:colors.constant   = s:colorize(210, 45, 70)
 
 " }}}
 " Highlight Utilities {{{

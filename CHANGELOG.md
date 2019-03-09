@@ -4,6 +4,11 @@ project adheres to [Semantic Versioning].
 
 # [Unreleased]
 
+### Added
+
+- Add the highlight for the default syntax group names Cursor and lCursor.
+  Those are basically the opposite of Normal.
+
 ### Changed
 
 - The color named violet associated to the constants has been changed because

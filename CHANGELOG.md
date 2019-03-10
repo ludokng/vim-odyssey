@@ -5,14 +5,19 @@ project adheres to [Semantic Versioning].
 ## [Unreleased]
 
 - The color name yellow for the constants has been modified and is now used for
-  the types with a hue of 70.
+  the types with a hue of 80.
 
   The color named cyan and blue have also been modified by increasing their
   hue, and their respective values are 180 and 210.
 
+  Plus, the same has happened to the colors named red and orange whose hues are
+  now at 10 and 40.
+
   |  Color  |    Name   |     Main usage    | Hue | Saturation | Value |
   | ------- | --------- | ----------------- | --- | ---------- | ----- |
-  | #a5b362 |    yellow |              Type |  70 |     45     |   70  |
+  | #b37062 |       red |          ErrorMsg |  10 |     45     |   70  |
+  | #b39862 |    orange |        WarningMsg |  40 |     45     |   70  |
+  | #98b362 |    yellow |              Type |  80 |     45     |   70  |
   | #62b3b3 |      cyan |           Keyword | 180 |     45     |   70  |
   | #62a8b3 |      blue |          Constant | 210 |     45     |   70  |
 

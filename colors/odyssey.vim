@@ -136,7 +136,7 @@ let s:colors.foreground = s:colorize(177, 11, 75)
 
 let s:colors.error      = s:colorize( 10, 45, 70)
 let s:colors.warning    = s:colorize( 40, 45, 70)
-let s:colors.type       = s:colorize( 80, 45, 70)
+let s:colors.type       = s:colorize( 70, 45, 70)
 let s:colors.procedure  = s:colorize(140, 45, 70)
 let s:colors.keyword    = s:colorize(180, 45, 70)
 let s:colors.constant   = s:colorize(210, 45, 70)

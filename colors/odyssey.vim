@@ -15,7 +15,8 @@
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
 " License: MIT
 " Release: 0.2.0
-" Initialisation {{{
+"
+" Prelude {{{
 
 if !has('gui_running')
   if !(has('termguicolors') && &termguicolors) && &t_Co != 256
@@ -36,7 +37,7 @@ endif
 let g:colors_name = 'odyssey'
 
 " }}}
-" Color Utilities {{{
+" Color Helpers {{{
 
 function! s:hsv2rgb(hue, saturation, value)
   let l:s = a:saturation / 100.0
@@ -151,7 +152,7 @@ let s:attributes['bold'] = { 'cterm': 'bold', 'gui': 'bold' }
 let s:attributes['underline'] = { 'cterm': 'underline', 'gui': 'underline' }
 
 " }}}
-" Highlight Utilities {{{
+" Highlight Helpers {{{
 
 function! s:HL(group, bg, fg, attr)
   let l:hi = 'highlight ' . a:group . ' '
@@ -177,11 +178,7 @@ function! s:HL(group, bg, fg, attr)
 endfunction
 
 " }}}
-" Default Highlights {{{
-"
-" This section links the different default highlight groups with their
-" associated colors. They appear in the same order than when the highlight
-" command is used.
+" User Interface {{{
 
 call s:HL(      'SpecialKey', 'background',    'warning', 'none')
 call s:HL(     'EndOfBuffer', 'background', 'linenumber', 'none')
@@ -232,6 +229,10 @@ call s:HL(         'lCursor', 'background', 'foreground', 'reverse')
 call s:HL(      'MatchParen', 'background',    'warning', 'underline')
 call s:HL(     'ToolbarLine', 'linenumber', 'linenumber', 'none')
 call s:HL(   'ToolbarButton', 'background', 'linenumber', 'reverse')
+
+" }}}
+" Syntax {{{
+
 call s:HL(         'Comment', 'background', 'linenumber', 'none')
 call s:HL(        'Constant', 'background',   'constant', 'none')
 call s:HL(         'Special', 'background',    'warning', 'none')

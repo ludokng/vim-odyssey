@@ -142,6 +142,16 @@ let s:colors.keyword    = s:colorize(180, 45, 70)
 let s:colors.constant   = s:colorize(210, 45, 70)
 
 " }}}
+" Attributes {{{
+
+let s:attributes = {}
+
+let s:attributes['none'] = { 'cterm': 'none', 'gui': 'none' }
+let s:attributes['reverse'] = { 'cterm': 'reverse', 'gui': 'reverse' }
+let s:attributes['bold'] = { 'cterm': 'bold', 'gui': 'bold' }
+let s:attributes['underline'] = { 'cterm': 'underline', 'gui': 'underline' }
+
+" }}}
 " Highlight Utilities {{{
 
 function! s:HL(group, bg, ...)

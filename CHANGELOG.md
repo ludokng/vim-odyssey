@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
 
-## [Unreleased]
+## [0.3.0] - 2019-03-16
 
 ### Changed
 
@@ -108,6 +108,6 @@ project adheres to [Semantic Versioning].
 
   + Otherwise, a GUI version of Vim must be used.
 
-[Unreleased]: https://github.com/ludokng/vim-odyssey/compare/0.2.0...HEAD
+[0.3.0]: https://github.com/ludokng/vim-odyssey/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/ludokng/vim-odyssey/compare/0.1.0...0.2.0
 [Semantic Versioning]: https://semver.org/spec/v2.0.0.html

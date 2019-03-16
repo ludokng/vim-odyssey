@@ -159,7 +159,7 @@ function! s:HL(group, bg, fg, attr)
 
   if a:bg != 'none'
     let l:bg = get(s:colors, a:bg)
-    let hi .= 'guibg=#'. l:bg['gui'] . ' ' . 'ctermbg=' . l:bg['cterm']
+    let l:hi .= 'guibg=#'. l:bg['gui'] . ' ' . 'ctermbg=' . l:bg['cterm']
   endif
 
   if a:fg != 'none'
@@ -174,7 +174,7 @@ function! s:HL(group, bg, fg, attr)
     let l:hi .= ' gui=none cterm=none'
   endif
 
-  execute hi
+  execute l:hi
 endfunction
 
 " }}}

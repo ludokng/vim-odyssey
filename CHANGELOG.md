@@ -6,7 +6,7 @@ project adheres to [Semantic Versioning].
 
 ### Changed
 
-- The `ErrorMsg`, `WarningMsg`, `Type`, `Error`, `Todo` syntax groups are now
+- The `ErrorMsg`, `WarningMsg`, `Error`, `Todo` syntax groups are now
   bold.
 
 - The color name yellow for the constants has been modified and is now used for

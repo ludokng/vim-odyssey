@@ -231,7 +231,7 @@ call s:HL(     'ToolbarLine', 'linenumber', 'linenumber', 'none')
 call s:HL(   'ToolbarButton', 'background', 'linenumber', 'reverse')
 
 " }}}
-" Syntax {{{
+" Default Syntax {{{
 
 call s:HL(         'Comment', 'background', 'linenumber', 'none')
 call s:HL(        'Constant', 'background',   'constant', 'none')

@@ -14,7 +14,7 @@
 "
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
 " License: MIT
-" Release: 0.2.0
+" Release: 0.3.0
 "
 " Prelude {{{
 
@@ -159,7 +159,7 @@ function! s:HL(group, bg, fg, attr)
 
   if a:bg != 'none'
     let l:bg = get(s:colors, a:bg)
-    let hi .= 'guibg=#'. l:bg['gui'] . ' ' . 'ctermbg=' . l:bg['cterm']
+    let l:hi .= 'guibg=#'. l:bg['gui'] . ' ' . 'ctermbg=' . l:bg['cterm']
   endif
 
   if a:fg != 'none'
@@ -174,7 +174,7 @@ function! s:HL(group, bg, fg, attr)
     let l:hi .= ' gui=none cterm=none'
   endif
 
-  execute hi
+  execute l:hi
 endfunction
 
 " }}}
@@ -231,7 +231,7 @@ call s:HL(     'ToolbarLine', 'linenumber', 'linenumber', 'none')
 call s:HL(   'ToolbarButton', 'background', 'linenumber', 'reverse')
 
 " }}}
-" Syntax {{{
+" Default Syntax {{{
 
 call s:HL(         'Comment', 'background', 'linenumber', 'none')
 call s:HL(        'Constant', 'background',   'constant', 'none')
@@ -239,7 +239,7 @@ call s:HL(         'Special', 'background',    'warning', 'none')
 call s:HL(      'Identifier', 'background',  'procedure', 'none')
 call s:HL(       'Statement', 'background',    'keyword', 'none')
 call s:HL(         'Preproc', 'background',    'warning', 'none')
-call s:HL(            'Type', 'background',       'type', 'bold')
+call s:HL(            'Type', 'background',       'type', 'none')
 call s:HL(      'Underlined', 'background', 'foreground', 'underline')
 call s:HL(          'Ignore', 'background', 'background', 'none')
 call s:HL(           'Error', 'background',      'error', 'bold')

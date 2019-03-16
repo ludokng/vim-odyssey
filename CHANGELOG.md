@@ -2,11 +2,11 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
 
-## [Unreleased]
+## [0.3.0] - 2019-03-16
 
 ### Changed
 
-- The `ErrorMsg`, `WarningMsg`, `Type`, `Error`, `Todo` syntax groups are now
+- The `ErrorMsg`, `WarningMsg`, `Error`, `Todo` syntax groups are now
   bold.
 
 - The color name yellow for the constants has been modified and is now used for
@@ -74,7 +74,7 @@ project adheres to [Semantic Versioning].
 ### Added
 
 - Add the all of the default highlight groups for the syntax and for the
-  editor.
+  editor. Plus their respective attributes are also set.
 
 - Add the 12-color palette of the Odyssey color scheme.
 
@@ -108,6 +108,6 @@ project adheres to [Semantic Versioning].
 
   + Otherwise, a GUI version of Vim must be used.
 
-[Unreleased]: https://github.com/ludokng/vim-odyssey/compare/0.2.0...HEAD
+[0.3.0]: https://github.com/ludokng/vim-odyssey/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/ludokng/vim-odyssey/compare/0.1.0...0.2.0
 [Semantic Versioning]: https://semver.org/spec/v2.0.0.html

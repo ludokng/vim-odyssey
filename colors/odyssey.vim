@@ -154,8 +154,8 @@ let s:attributes['underline'] = { 'cterm': 'underline', 'gui': 'underline' }
 " }}}
 " Highlight Helpers {{{
 
-function! s:HL(group, bg, fg, attr)
-  let l:hi = 'highlight ' . a:group . ' '
+function! s:h(group, bg, fg, attr)
+  let l:hi = 'highlight! ' . a:group . ' '
 
   if a:bg != 'none'
     let l:bg = get(s:colors, a:bg)
@@ -177,88 +177,93 @@ function! s:HL(group, bg, fg, attr)
   execute l:hi
 endfunction
 
+function! s:l(origin, target)
+  let l:hi = 'highlight! link ' . a:origin . ' ' . a:target
+  execute l:hi
+endfunction
+
 " }}}
 " User Interface {{{
 
-call s:HL(      'SpecialKey', 'background',    'warning',      'none')
-call s:HL(     'EndOfBuffer', 'background', 'linenumber',      'none')
-call s:HL(         'NonText', 'background', 'linenumber',      'none')
-call s:HL(       'Directory', 'background', 'foreground',      'none')
-call s:HL(        'ErrorMsg', 'background',      'error',      'bold')
-call s:HL(         'MoreMsg', 'background',    'warning',      'none')
-call s:HL(         'ModeMsg', 'background',    'warning',      'none')
-call s:HL(       'IncSearch', 'background', 'foreground',   'reverse')
-call s:HL(          'Search', 'background', 'linenumber',   'reverse')
-call s:HL(          'LineNr', 'background', 'linenumber',      'none')
-call s:HL(    'CursorLineNr', 'cursorline', 'foreground',      'none')
-call s:HL(        'Question', 'background',    'warning',      'none')
-call s:HL(      'StatusLine', 'cursorline', 'foreground',      'none')
-call s:HL(    'StatusLineNC', 'beyondback', 'linenumber',      'none')
-call s:HL(       'VertSplit', 'beyondback', 'beyondback',      'none')
-call s:HL(           'Title', 'background',  'procedure',      'none')
-call s:HL(          'Visual', 'background', 'foreground',   'reverse')
-call s:HL(       'VisualNOS', 'background', 'foreground',   'reverse')
-call s:HL(      'WarningMsg', 'background',    'warning',      'bold')
-call s:HL(        'WildMenu', 'cursorline',    'warning',      'none')
-call s:HL(          'Folded', 'foldedline', 'linenumber',      'none')
-call s:HL(      'FoldColumn', 'foldedline', 'linenumber',      'none')
-call s:HL(         'DiffAdd',  'procedure', 'background',      'none')
-call s:HL(      'DiffChange',    'warning', 'background',      'none')
-call s:HL(      'DiffDelete',      'error', 'background',      'none')
-call s:HL(        'DiffText',      'error', 'background',      'none')
-call s:HL(      'SignColumn', 'background',      'error',      'none')
-call s:HL(         'Conceal', 'background',    'keyword',      'none')
-call s:HL(        'SpellBad', 'background',      'error', 'underline')
-call s:HL(        'SpellCap', 'background',    'warning', 'underline')
-call s:HL(       'SpellRare', 'background',   'constant', 'underline')
-call s:HL(      'SpellLocal', 'background',    'keyword', 'underline')
-call s:HL(           'Pmenu', 'foldedline', 'linenumber',      'none')
-call s:HL(        'PmenuSel', 'background', 'foreground',   'reverse')
-call s:HL(       'PmenuSbar', 'foldedline', 'foldedline',      'none')
-call s:HL(      'PmenuThumb', 'linenumber', 'linenumber',      'none')
-call s:HL(         'TabLine', 'background', 'linenumber',      'none')
-call s:HL(      'TabLineSel', 'background', 'foreground',      'none')
-call s:HL(     'TabLineFill', 'beyondback', 'linenumber',      'none')
-call s:HL(    'CursorColumn', 'cursorline', 'foreground',      'none')
-call s:HL(      'CursorLine', 'cursorline',       'none',      'none')
-call s:HL(     'ColorColumn', 'foldedline',       'none',      'none')
-call s:HL(  'StatusLineTerm', 'cursorline', 'foreground',      'none')
-call s:HL('StatusLineTermNC', 'beyondback', 'linenumber',      'none')
-call s:HL(          'Cursor', 'background', 'foreground',   'reverse')
-call s:HL(         'lCursor', 'background', 'foreground',   'reverse')
-call s:HL(      'MatchParen', 'background',    'warning', 'underline')
-call s:HL(     'ToolbarLine', 'linenumber', 'linenumber',      'none')
-call s:HL(   'ToolbarButton', 'background', 'linenumber',   'reverse')
-call s:HL(          'Normal', 'background', 'foreground',      'none')
+call s:h(      'SpecialKey', 'background',    'warning',      'none')
+call s:h(     'EndOfBuffer', 'background', 'linenumber',      'none')
+call s:h(         'NonText', 'background', 'linenumber',      'none')
+call s:h(       'Directory', 'background', 'foreground',      'none')
+call s:h(        'ErrorMsg', 'background',      'error',      'bold')
+call s:h(         'MoreMsg', 'background',    'warning',      'none')
+call s:h(         'ModeMsg', 'background',    'warning',      'none')
+call s:h(       'IncSearch', 'background', 'foreground',   'reverse')
+call s:h(          'Search', 'background', 'linenumber',   'reverse')
+call s:h(          'LineNr', 'background', 'linenumber',      'none')
+call s:h(    'CursorLineNr', 'cursorline', 'foreground',      'none')
+call s:h(        'Question', 'background',    'warning',      'none')
+call s:h(      'StatusLine', 'cursorline', 'foreground',      'none')
+call s:h(    'StatusLineNC', 'beyondback', 'linenumber',      'none')
+call s:h(       'VertSplit', 'beyondback', 'beyondback',      'none')
+call s:h(           'Title', 'background',  'procedure',      'none')
+call s:h(          'Visual', 'background', 'foreground',   'reverse')
+call s:h(       'VisualNOS', 'background', 'foreground',   'reverse')
+call s:h(      'WarningMsg', 'background',    'warning',      'bold')
+call s:h(        'WildMenu', 'cursorline',    'warning',      'none')
+call s:h(          'Folded', 'foldedline', 'linenumber',      'none')
+call s:h(      'FoldColumn', 'foldedline', 'linenumber',      'none')
+call s:h(         'DiffAdd',  'procedure', 'background',      'none')
+call s:h(      'DiffChange',    'warning', 'background',      'none')
+call s:h(      'DiffDelete',      'error', 'background',      'none')
+call s:h(        'DiffText',      'error', 'background',      'none')
+call s:h(      'SignColumn', 'background',      'error',      'none')
+call s:h(         'Conceal', 'background',    'keyword',      'none')
+call s:h(        'SpellBad', 'background',      'error', 'underline')
+call s:h(        'SpellCap', 'background',    'warning', 'underline')
+call s:h(       'SpellRare', 'background',   'constant', 'underline')
+call s:h(      'SpellLocal', 'background',    'keyword', 'underline')
+call s:h(           'Pmenu', 'foldedline', 'linenumber',      'none')
+call s:h(        'PmenuSel', 'background', 'foreground',   'reverse')
+call s:h(       'PmenuSbar', 'foldedline', 'foldedline',      'none')
+call s:h(      'PmenuThumb', 'linenumber', 'linenumber',      'none')
+call s:h(         'TabLine', 'background', 'linenumber',      'none')
+call s:h(      'TabLineSel', 'background', 'foreground',      'none')
+call s:h(     'TabLineFill', 'beyondback', 'linenumber',      'none')
+call s:h(    'CursorColumn', 'cursorline', 'foreground',      'none')
+call s:h(      'CursorLine', 'cursorline',       'none',      'none')
+call s:h(     'ColorColumn', 'foldedline',       'none',      'none')
+call s:h(  'StatusLineTerm', 'cursorline', 'foreground',      'none')
+call s:h('StatusLineTermNC', 'beyondback', 'linenumber',      'none')
+call s:h(          'Cursor', 'background', 'foreground',   'reverse')
+call s:h(         'lCursor', 'background', 'foreground',   'reverse')
+call s:h(      'MatchParen', 'background',    'warning', 'underline')
+call s:h(     'ToolbarLine', 'linenumber', 'linenumber',      'none')
+call s:h(   'ToolbarButton', 'background', 'linenumber',   'reverse')
+call s:h(          'Normal', 'background', 'foreground',      'none')
 
 " }}}
 " Default Syntax {{{
 
-call s:HL(     'Comment', 'background', 'linenumber',      'none')
+call s:h(     'Comment', 'background', 'linenumber',      'none')
 
-call s:HL(    'Constant', 'background',   'constant',      'none')
+call s:h(    'Constant', 'background',   'constant',      'none')
 
-call s:HL(  'Identifier', 'background',  'procedure',      'none')
+call s:h(  'Identifier', 'background',  'procedure',      'none')
 
-call s:HL(   'Statement', 'background',    'keyword',      'none')
-call s:HL(    'Operator', 'background',  'procedure',      'none')
+call s:h(   'Statement', 'background',    'keyword',      'none')
+call s:l(    'Operator', 'Identifier')
 
-call s:HL(     'Preproc', 'background',    'warning',      'none')
+call s:h(     'Preproc', 'background',    'warning',      'none')
 
-call s:HL(        'Type', 'background',       'type',      'none')
-call s:HL('StorageClass', 'background',    'keyword',      'none')
-call s:HL(   'Structure', 'background',    'keyword',      'none')
-call s:HL(     'Typedef', 'background',    'keyword',      'none')
+call s:h(        'Type', 'background',       'type',      'none')
+call s:l('StorageClass', 'Statement')
+call s:l(   'Structure', 'Statement')
+call s:l(     'Typedef', 'Statement')
 
-call s:HL(     'Special', 'background',    'warning',      'none')
+call s:h(     'Special', 'background',    'warning',      'none')
 
-call s:HL(  'Underlined', 'background', 'foreground', 'underline')
+call s:h(  'Underlined', 'background', 'foreground', 'underline')
 
-call s:HL(      'Ignore', 'background', 'background',      'none')
+call s:h(      'Ignore', 'background', 'background',      'none')
 
-call s:HL(       'Error', 'background',      'error',      'bold')
+call s:h(       'Error', 'background',      'error',      'bold')
 
-call s:HL(        'Todo', 'background',    'warning',      'bold')
+call s:h(        'Todo', 'background',    'warning',      'bold')
 
 " }}}
 " vim: foldmethod=marker

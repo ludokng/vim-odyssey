@@ -1,6 +1,17 @@
 # Changelog
+
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
+
+## [Unreleased]
+
+### Changed
+
+- The color of the highlight group 'Operator' has been modified. This group is
+  now associated to the green color.
+
+- The color of the highlight groups 'StorageClass', 'Structure' and 'Typedef'
+  have been modified. They are now colorized with the cyan colors.
 
 ## [0.3.0] - 2019-03-16
 
@@ -108,6 +119,7 @@ project adheres to [Semantic Versioning].
 
   + Otherwise, a GUI version of Vim must be used.
 
+[Unreleased]: https://github.com/ludokng/vim-odyssey/compare/0.3.0...HEAD
 [0.3.0]: https://github.com/ludokng/vim-odyssey/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/ludokng/vim-odyssey/compare/0.1.0...0.2.0
 [Semantic Versioning]: https://semver.org/spec/v2.0.0.html

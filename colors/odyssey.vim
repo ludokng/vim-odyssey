@@ -234,34 +234,17 @@ call s:HL(          'Normal', 'background', 'foreground',      'none')
 " }}}
 " Default Syntax {{{
 
-call s:HL(    'Comment', 'background', 'linenumber',      'none')
-
-call s:HL(   'Constant', 'background',   'constant',      'none')
-call s:HL(     'String', 'background',   'constant',      'none')
-call s:HL(     'Number', 'background',   'constant',      'none')
-
-call s:HL(   'Function', 'background',  'procedure',      'none')
-call s:HL( 'Identifier', 'background',  'procedure',      'none')
-
-call s:HL(  'Statement', 'background',    'keyword',      'none')
-call s:HL('Conditional', 'background',    'keyword',      'none')
-
-call s:HL(    'Preproc', 'background',    'warning',      'none')
-
-call s:HL(       'Type', 'background',       'type',      'none')
-
-call s:HL(    'Special', 'background',    'warning',      'none')
-call s:HL('SpecialChar', 'background',    'warning',      'none')
-call s:HL(        'Tag', 'background',    'warning',      'none')
-call s:HL(  'Delimiter', 'background',    'warning',      'none')
-
-call s:HL( 'Underlined', 'background', 'foreground', 'underline')
-
-call s:HL(     'Ignore', 'background', 'background',      'none')
-
-call s:HL(      'Error', 'background',      'error',      'bold')
-
-call s:HL(       'Todo', 'background',    'warning',      'bold')
+call s:HL(   'Comment', 'background', 'linenumber',      'none')
+call s:HL(  'Constant', 'background',   'constant',      'none')
+call s:HL('Identifier', 'background',  'procedure',      'none')
+call s:HL( 'Statement', 'background',    'keyword',      'none')
+call s:HL(   'Preproc', 'background',    'warning',      'none')
+call s:HL(      'Type', 'background',       'type',      'none')
+call s:HL(   'Special', 'background',    'warning',      'none')
+call s:HL('Underlined', 'background', 'foreground', 'underline')
+call s:HL(    'Ignore', 'background', 'background',      'none')
+call s:HL(     'Error', 'background',      'error',      'bold')
+call s:HL(      'Todo', 'background',    'warning',      'bold')
 
 " }}}
 " vim: foldmethod=marker

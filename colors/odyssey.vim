@@ -147,9 +147,10 @@ let s:colors.constant   = s:colorize(210, 45, 70)
 
 let s:attributes = {}
 
-let s:attributes['reverse'] = { 'cterm': 'reverse', 'gui': 'reverse' }
-let s:attributes['bold'] = { 'cterm': 'bold', 'gui': 'bold' }
+let s:attributes[  'reverse'] = { 'cterm': 'reverse'  , 'gui': 'reverse'   }
+let s:attributes[     'bold'] = { 'cterm': 'bold'     , 'gui': 'bold'      }
 let s:attributes['underline'] = { 'cterm': 'underline', 'gui': 'underline' }
+let s:attributes[   'italic'] = { 'cterm': 'italic'   , 'gui': 'italic'    }
 
 " }}}
 " Highlight Helpers {{{
@@ -183,7 +184,7 @@ function! s:l(origin, target)
 endfunction
 
 " }}}
-" User Interface {{{
+" Interface Highlights {{{
 
 call s:h(      'SpecialKey', 'background',    'warning',      'none')
 call s:h(     'EndOfBuffer', 'background', 'linenumber',      'none')
@@ -237,33 +238,34 @@ call s:h(   'ToolbarButton', 'background', 'linenumber',   'reverse')
 call s:h(          'Normal', 'background', 'foreground',      'none')
 
 " }}}
-" Default Syntax {{{
+" Default Highlights {{{
 
 call s:h(     'Comment', 'background', 'linenumber',      'none')
-
 call s:h(    'Constant', 'background',   'constant',      'none')
-
 call s:h(  'Identifier', 'background',  'procedure',      'none')
-
 call s:h(   'Statement', 'background',    'keyword',      'none')
 call s:l(    'Operator', 'Identifier')
-
 call s:h(     'Preproc', 'background',    'warning',      'none')
-
-call s:h(        'Type', 'background',       'type',      'none')
-call s:l('StorageClass', 'Statement')
-call s:l(   'Structure', 'Statement')
-call s:l(     'Typedef', 'Statement')
-
+call s:h(        'Type', 'background',       'type',    'italic')
+call s:l('StorageClass',  'Statement')
+call s:l(   'Structure',  'Statement')
+call s:l(     'Typedef',  'Statement')
 call s:h(     'Special', 'background',    'warning',      'none')
-
 call s:h(  'Underlined', 'background', 'foreground', 'underline')
-
 call s:h(      'Ignore', 'background', 'background',      'none')
-
 call s:h(       'Error', 'background',      'error',      'bold')
-
 call s:h(        'Todo', 'background',    'warning',      'bold')
+
+" }}}
+" Ruby Highlights {{{
+
+call s:l(                 'rubyClass',  'Statement')
+call s:h(         'rubyClassVariable', 'background',  'warning', 'italic')
+call s:l(                'rubyDefine',  'Statement')
+call s:l(               'rubyInclude',  'Statement')
+call s:h(      'rubyInstanceVariable', 'background',  'warning', 'italic')
+call s:h('rubyInterpolationDelimiter', 'background', 'constant', 'italic')
+call s:l(       'rubyStringDelimiter',   'Constant')
 
 " }}}
 " vim: foldmethod=marker

@@ -5,6 +5,11 @@ project adheres to [Semantic Versioning].
 
 ## [Unreleased]
 
+### Added
+
+- Supports for the Ruby programming language have been added. Some highlights
+  of the existing syntax have been modified to better fit the color scheme.
+
 ### Changed
 
 - The color of the highlight group 'Operator' has been modified. This group is

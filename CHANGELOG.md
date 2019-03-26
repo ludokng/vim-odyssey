@@ -12,9 +12,6 @@ project adheres to [Semantic Versioning].
 
 ### Changed
 
-- The color of the highlight group 'Operator' has been modified. This group is
-  now associated to the green color.
-
 - The color of the highlight groups 'StorageClass', 'Structure' and 'Typedef'
   have been modified. They are now colorized with the cyan colors.
 

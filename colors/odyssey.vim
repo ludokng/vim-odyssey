@@ -256,6 +256,22 @@ call s:h(       'Error', 'background',      'error',      'bold')
 call s:h(        'Todo', 'background',    'warning',      'bold')
 
 " }}}
+" Java Highlights {{{
+
+call s:h(        'javaAnnotation',      'background', 'warning', 'italic')
+call s:l(          'javaExternal',       'Statement')
+call s:l(           'javaTypeDef', 'javaOdysseyThis')
+call s:l(      'javaOdysseyClass',            'Type')
+call s:l(  'javaOdysseyInterface',            'Type')
+call s:l(    'javaOdysseyCasting',            'Type')
+call s:l(      'javaOdysseyArray',          'Normal')
+call s:l(    'javaOdysseyGeneric',          'Normal')
+call s:l(       'javaOdysseyType',            'Type')
+call s:l('javaOdysseyConstructor',            'Type')
+call s:l(     'javaOdysseyMethod',        'Function')
+call s:l(       'javaOdysseyThis',         'Special')
+
+" }}}
 " Ruby Highlights {{{
 
 call s:l(                 'rubyClass',  'Statement')

@@ -7,8 +7,15 @@ project adheres to [Semantic Versioning].
 
 ### Added
 
+- Supports for the Java programming language have been added. The highlights
+  are achieved by reusing some existing pieces of syntax and by creating new
+  ones. Existing syntax groups have been remapped to other default syntax
+  groups and some new ones have been created for the occassion.
+
 - Supports for the Ruby programming language have been added. Some highlights
-  of the existing syntax have been modified to better fit the color scheme.
+  of the existing syntax have been modified to better fit the color scheme. In
+  other words, some existing Ruby syntax groups have been linked to other
+  default syntax groups.
 
 ### Changed
 

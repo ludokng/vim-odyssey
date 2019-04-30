@@ -22,8 +22,8 @@ syntax match   javaOdysseyInterface   "\%(\<interface\>\s\+\)\@<=\<\u\w*\>"
 syntax match   javaOdysseyArray       "\[\]" contained
 syntax match   javaOdysseyGeneric     "[><]" contained
 syntax match   javaOdysseySeparator   "," contained
-syntax match   javaOdysseyType        "\%(\<\u\w*\>\%(<\%(\w\|,\|\s\|<\|>\)\+>\)\=\%(\[\]\)\=\)\%(\s*\<\l\w*\>\)\@=" containedin=javaParenT,javaParenT1,javaParenT2 contains=javaOdysseyGeneric,javaOdysseyArray,javaOdysseySeparator
-syntax match   javaOdysseyConstructor "\%(\<\u\w*\>\)\%(<\%(\w\|,\|\s\|<\|>\)\+>\)\=\%((\|\[\)"me=e-1 containedin=javaParenT,javaParenT1,javaParenT2 contains=javaOdysseyGeneric,javaOdysseySeparator
+syntax match   javaOdysseyType        "\%(\<\u\w*\>\%(<\%(\w\|,\|\s\|<\|>\)*>\)\=\%(\[\]\)\=\)\%(\s*\<\l\w*\>\)\@=" containedin=javaParenT,javaParenT1,javaParenT2 contains=javaOdysseyGeneric,javaOdysseyArray,javaOdysseySeparator
+syntax match   javaOdysseyConstructor "\%(\<\u\w*\>\)\%(<\%(\w\|,\|\s\|<\|>\)*>\)\=\%((\|\[\)"me=e-1 containedin=javaParenT,javaParenT1,javaParenT2 contains=javaOdysseyGeneric,javaOdysseySeparator
 syntax match   javaOdysseyMethod      "\<\l\w*\>("me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
 syntax match   javaOdysseyCasting     "(\<\u\w*\>\%(<\%(\w\|,\|\s\|<\|>\)\+>\)\=\%(\[\]\)\=)"hs=s+1,he=e-1 containedin=javaParenT,javaParenT1,javaParenT2 contains=javaOdysseyGeneric,javaOdysseyArray,javaOdysseySeparator
 " }}}

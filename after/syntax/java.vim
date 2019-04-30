@@ -16,7 +16,9 @@
 " License: MIT
 "
 " Java Syntax {{{
+
 syntax keyword javaOdysseyThis        this
+syntax match   javaOdysseyArrow       "->" containedin=javaParenT,javaParenT1,javaParenT2
 syntax match   javaOdysseyClass       "\%(\<class\>\s\+\)\@<=\<\u\w*\>"
 syntax match   javaOdysseyInterface   "\%(\<interface\>\s\+\)\@<=\<\u\w*\>"
 syntax match   javaOdysseyEnum        "\%(\<enum\>\s\+\)\@<=\<\u\w*\>"
@@ -28,5 +30,6 @@ syntax match   javaOdysseyConstructor "\%(\<\u\w*\>\)\%(<\%(\u\w*\|,\|\s\|<\|>\)
 syntax match   javaOdysseyMethod      "\<\l\w*\>("me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
 syntax match   javaOdysseyCasting     "(\<\u\w*\>\%(<\%(\u\w*\|,\|\s\|<\|>\)\+>\)\=\%(\[\]\)\=)"hs=s+1,he=e-1 containedin=javaParenT,javaParenT1,javaParenT2 contains=javaOdysseyGeneric,javaOdysseyArray,javaOdysseySeparator
 syntax match   javaOdysseyImport      "\%(\<import\>\s\+\%(\l\+.\)\+\)\@<=\%(\u\w*\)\s*;"
+
 " }}}
 " vim: foldmethod=marker

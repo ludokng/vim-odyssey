@@ -19,6 +19,7 @@
 syntax keyword javaOdysseyThis        this
 syntax match   javaOdysseyClass       "\%(\<class\>\s\+\)\@<=\<\u\w*\>"
 syntax match   javaOdysseyInterface   "\%(\<interface\>\s\+\)\@<=\<\u\w*\>"
+syntax match   javaOdysseyEnum        "\%(\<enum\>\s\+\)\@<=\<\u\w*\>"
 syntax match   javaOdysseyArray       "\[\]" contained
 syntax match   javaOdysseyGeneric     "[><]" contained
 syntax match   javaOdysseySeparator   "," contained

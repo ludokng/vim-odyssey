@@ -14,7 +14,6 @@
 "
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
 " License: MIT
-" Release: 0.3.0
 "
 " Prelude {{{
 

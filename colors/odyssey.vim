@@ -263,13 +263,16 @@ call s:l(          'javaExternal',       'Statement')
 call s:l(           'javaTypeDef', 'javaOdysseyThis')
 call s:l(      'javaOdysseyClass',            'Type')
 call s:l(  'javaOdysseyInterface',            'Type')
+call s:l(       'javaOdysseyEnum',            'Type')
 call s:l(    'javaOdysseyCasting',            'Type')
+call s:l(     'javaOdysseyImport',            'Type')
 call s:l(      'javaOdysseyArray',          'Normal')
 call s:l(    'javaOdysseyGeneric',          'Normal')
 call s:l(       'javaOdysseyType',            'Type')
 call s:l('javaOdysseyConstructor',            'Type')
 call s:l(     'javaOdysseyMethod',        'Function')
 call s:l(       'javaOdysseyThis',         'Special')
+call s:l(      'javaOdysseyArrow',        'Operator')
 
 " }}}
 " Ruby Highlights {{{

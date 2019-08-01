@@ -275,6 +275,7 @@ call s:l('javaOdysseyConstructor',            'Type')
 call s:l(     'javaOdysseyMethod',        'Function')
 call s:l(       'javaOdysseyThis',         'Special')
 call s:l(      'javaOdysseyArrow',        'Operator')
+call s:l(     'javaOdysseyLombok',       'Statement')
 
 " }}}
 " Ruby Highlights {{{

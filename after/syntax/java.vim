@@ -18,6 +18,7 @@
 " Java Syntax {{{
 
 syntax keyword javaOdysseyThis        this
+syntax keyword javaOdysseyLombok      val var
 syntax match   javaOdysseyArrow       "->" containedin=javaParenT,javaParenT1,javaParenT2
 syntax match   javaOdysseyClass       "\%(\<class\>\s\+\)\@<=\<\u\w*\>"
 syntax match   javaOdysseyInterface   "\%(\<interface\>\s\+\)\@<=\<\u\w*\>"

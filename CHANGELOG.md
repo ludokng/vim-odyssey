@@ -22,6 +22,9 @@ project adheres to [Semantic Versioning].
 - The color of the highlight groups 'StorageClass', 'Structure' and 'Typedef'
   have been modified. They are now colorized with the cyan colors.
 
+- The highlight group 'Type' is no more italic, but its attribute has been
+  reset to normal.
+
 ## [0.3.0] - 2019-03-16
 
 ### Changed

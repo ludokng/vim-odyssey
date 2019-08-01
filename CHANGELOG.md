@@ -80,10 +80,10 @@ project adheres to [Semantic Versioning].
 
   The violet color is removed, and the yellow-green color is added.
 
-  |    Color    |    Name    |     Main usage    | Hue | Saturation | Value |
-  | ----------- | ---------- | ----------------- | --- | ---------- | ----- |
-  |     #add590 |     yellow |          Constant |  95 |     45     |   70  |
-  | ~~#6270b3~~ | ~~violet~~ |          Constant | 230 |     45     |   70  |
+  |    Color    |    Name    |     Main usage    |  Hue  | Saturation | Value |
+  | ----------- | ---------- | ----------------- | ----- | ---------- | ----- |
+  |     #add590 |     yellow |          Constant |   95  |     45     |   70  |
+  | ~~#6270b3~~ | ~~violet~~ |      ~~Constant~~ |~~230~~|   ~~45~~   | ~~70~~|
 
 - The highlight for MatchParen has been modified. In fact, when the cursor is
   over a parenthese, a bracket, a brace, and so on, the matching element turns

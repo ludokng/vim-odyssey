@@ -3,19 +3,31 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
 
-## [Unreleased]
+## [0.4.0] - 2019-08-02
 
 ### Added
 
-- Supports for the Java programming language have been added. The highlights
-  are achieved by reusing some existing pieces of syntax and by creating new
-  ones. Existing syntax groups have been remapped to other default syntax
-  groups and some new ones have been created for the occassion.
+- Supports for the **Java** programming language have been added.
 
-- Supports for the Ruby programming language have been added. Some highlights
-  of the existing syntax have been modified to better fit the color scheme. In
-  other words, some existing Ruby syntax groups have been linked to other
-  default syntax groups.
+  + Syntax for the 'import' and 'import static' statements have been added.
+
+  + Syntax rules for the type and classe names have been added. Everything that
+    matches the regexp "\u\w*" is globally considered to be a type or a class
+    name.
+
+  + Syntax rules for the enum values have been added. Everything that matches
+    the regexp "\u\w\+" is globally considered to be an enum value or a
+    constant. It must be noted that "\u" will be highlight as a type because it
+    is mostly used for type parametrization in generics.
+
+- Supports for the **Ruby** programming language have been added.
+
+  + 'require', 'def' and 'class' are highlighted as statements.
+
+  + Class and instance variables are highlighted in orange.
+
+  + String delimiters are highlighted as constants and string interpolation
+    delimiters are highlighted as functions.
 
 ### Changed
 
@@ -131,7 +143,7 @@ project adheres to [Semantic Versioning].
 
   + Otherwise, a GUI version of Vim must be used.
 
-[Unreleased]: https://github.com/ludokng/vim-odyssey/compare/0.3.0...HEAD
+[0.4.0]: https://github.com/ludokng/vim-odyssey/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/ludokng/vim-odyssey/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/ludokng/vim-odyssey/compare/0.1.0...0.2.0
 [Semantic Versioning]: https://semver.org/spec/v2.0.0.html

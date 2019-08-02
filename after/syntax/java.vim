@@ -3,16 +3,22 @@
 "                   / // __ `/| | / // __ `/  / /_ / __ \ / ___/
 "                  / // /_/ / | |/ // /_/ /  / __// /_/ // /
 "               __/ / \__,_/  |___/ \__,_/  /_/   \____//_/
-"              /___/         __
+"              /___/          __
 "                 ____   ____/ /__  __ _____ _____ ___   __  __
 "                / __ \ / __  // / / // ___// ___// _ \ / / / /
 "               / /_/ // /_/ // /_/ /(__  )(__  )/  __// /_/ /
 "               \____/ \__,_/ \__, //____//____/ \___/ \__, /
 "                            /____/                   /____/
 "
-"                           Write once, run anywhere
+" Note: This script aims at providing some new syntax element for Java. It
+" therefore declares syntax elements for:
+"   - Type and class names,
+"   - Enum values,
+"   - Import statements ('import' and 'import static').
 "
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
+" Version: 0.4.0
+" Since: 0.4.0
 " License: MIT
 "
 " Java Syntax {{{

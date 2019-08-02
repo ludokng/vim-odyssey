@@ -13,8 +13,9 @@
 " Odyssey.
 "
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
+" Version: 0.4.0
+" Since: 0.1.0
 " License: MIT
-" Release: 0.3.0
 "
 " Prelude {{{
 

@@ -33,8 +33,9 @@ syntax match   javaOdysseyCasting         "(\<\u\w*\>\%(<\%(\u\w*\|,\|\s\|<\|>\)
 syntax match   javaOdysseyImport          "\%(\<import\>\s\+\%(\l\+.\)\+\)\@<=\%(\u\w*\)\%(\s*;\)\@="
 syntax match   javaOdysseyExtends         "\%(\<extends\>\s\+\)\@<=\%(\<\u\w*\>\)\%(<\%(\u\w*\|,\|\s\|<\|>\)*>\)\=" contains=javaOdysseyGeneric,javaOdysseySeparator
 syntax match   javaOdysseyImplements      "\%(\<implements\>\s\+\)\@<=\%(\<\u\w*\>\)\%(<\%(\u\w*\|,\|\s\|<\|>\)*>\)\=" contains=javaOdysseyGeneric,javaOdysseySeparator
-syntax match   javaOdysseyEnumValue       "\<[A-Z][_A-Z0-9]*\>" containedin=javaParenT,javaParenT1,javaParenT2,javaLabelRegion
-syntax match   javaOdysseyEnumConstructor "\<[A-Z][_A-Z0-9]*\>("me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
+syntax match   javaOdysseyDottedClass     "\<\u\w*\>."me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
+syntax match   javaOdysseyEnumValue       "\<[A-Z][_A-Z0-9]\+\>" containedin=javaParenT,javaParenT1,javaParenT2,javaLabelRegion
+syntax match   javaOdysseyEnumConstructor "\<[A-Z][_A-Z0-9]\+\>("me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
 
 " }}}
 " vim: foldmethod=marker

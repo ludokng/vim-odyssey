@@ -10,8 +10,15 @@
 "               \____/ \__,_/ \__, //____//____/ \___/ \__, /
 "                            /____/                   /____/
 "
+" Note: This script aims at providing some new syntax element for Java. It
+" therefore declares syntax elements for:
+"   - Type and class names,
+"   - Enum values,
+"   - Import statements ('import' and 'import static').
 "
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
+" Version: 0.4.0
+" Since: 0.4.0
 " License: MIT
 "
 " Java Syntax {{{

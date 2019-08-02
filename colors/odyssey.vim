@@ -290,7 +290,7 @@ call s:h(         'rubyClassVariable', 'background',  'warning', 'italic')
 call s:l(                'rubyDefine',  'Statement')
 call s:l(               'rubyInclude',  'Statement')
 call s:h(      'rubyInstanceVariable', 'background',  'warning', 'italic')
-call s:h('rubyInterpolationDelimiter', 'background', 'constant', 'italic')
+call s:l('rubyInterpolationDelimiter',   'Function')
 call s:l(       'rubyStringDelimiter',   'Constant')
 
 " }}}

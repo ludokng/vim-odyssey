@@ -35,15 +35,15 @@ syntax match   javaOdysseySeparator       "," contained
 syntax match   javaOdysseyType            "\%(\<\u\w*\>\%(<\%(\u\w*\|,\|\s\|<\|>\)*>\)\=\%(\[\]\)\=\)\%(\s*\<\l\w*\>\)\@=" containedin=javaParenT,javaParenT1,javaParenT2 contains=javaOdysseyGeneric,javaOdysseyArray,javaOdysseySeparator
 syntax match   javaOdysseyConstructor     "\%(\<\u\w*\>\)\%(<\%(\u\w*\|,\|\s\|<\|>\)*>\)\=\%((\|\[\)"me=e-1 containedin=javaParenT,javaParenT1,javaParenT2 contains=javaOdysseyGeneric,javaOdysseySeparator
 syntax match   javaOdysseyMethod          "\<\l\w*\>("me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
+syntax match   javaOdysseyDottedClass     "\<\u\w*\>\."me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
+syntax match   javaOdysseyEnumValue       "\<[A-Z][_A-Z0-9]\+\>" containedin=javaParenT,javaParenT1,javaParenT2,javaLabelRegion
+syntax match   javaOdysseyEnumConstructor "\<[A-Z][_A-Z0-9]\+\>("me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
 syntax match   javaOdysseyCasting         "(\<\u\w*\>\%(<\%(\u\w*\|,\|\s\|<\|>\)\+>\)\=\%(\[\]\)\=)"hs=s+1,he=e-1 containedin=javaParenT,javaParenT1,javaParenT2 contains=javaOdysseyGeneric,javaOdysseyArray,javaOdysseySeparator
-syntax match   javaOdysseyImport          "\%(\<import\>\s\+\%(\l\+\.\)\+\)\@<=\%(\u\w*\)\%(\s*;\)\@="
+syntax match   javaOdysseyImport          "\%(\<import\>\s\+\%(\w\+\.\)\+\)\@<=\%(\u\w*\)\%(\s*;\)\@="
 syntax match   javaOdysseyStaticMethod    "\%(\<import\>\s\+\<static\>\s\+\%(\w\+\.\)\+\)\@<=\%(\l\w*\)\%(\s*;\)\@="
 syntax match   javaOdysseyStaticClass     "\%(\<import\>\s\+\<static\>\s\+\%(\w\+\.\)\+\)\@<=\%(\u\w*\)\%(\s*;\)\@="
 syntax match   javaOdysseyExtends         "\%(\<extends\>\s\+\)\@<=\%(\<\u\w*\>\)\%(<\%(\u\w*\|,\|\s\|<\|>\)*>\)\=" contains=javaOdysseyGeneric,javaOdysseySeparator
 syntax match   javaOdysseyImplements      "\%(\<implements\>\s\+\)\@<=\%(\<\u\w*\>\)\%(<\%(\u\w*\|,\|\s\|<\|>\)*>\)\=" contains=javaOdysseyGeneric,javaOdysseySeparator
-syntax match   javaOdysseyDottedClass     "\<\u\w*\>\."me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
-syntax match   javaOdysseyEnumValue       "\<[A-Z][_A-Z0-9]\+\>" containedin=javaParenT,javaParenT1,javaParenT2,javaLabelRegion
-syntax match   javaOdysseyEnumConstructor "\<[A-Z][_A-Z0-9]\+\>("me=e-1 containedin=javaParenT,javaParenT1,javaParenT2
 
 " }}}
 " vim: foldmethod=marker

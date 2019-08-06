@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
 
+## [Unreleased]
+
+## Changed
+
+- Change the name of some of the Java syntax group added by the plugin.
+
+  + `javaOdysseyImport` becomes `javaOdysseyGetClass`,
+
+  + `javaOdysseyStaticMethod` becomes `javaOdysseyGetStaticMethod`,
+
+  + `javaOdysseyStaticClass` becomes `javaOdysseyGetStaticClass`,
+
+  + `javaOdysseyDottedClass` becomes `javaOdysseyDotOperator`.
+
+## Fixed
+
+- Fix the Java highlight for nested class names in 'import' statements.
+
 ## [0.4.0] - 2019-08-02
 
 ### Added
@@ -143,6 +161,7 @@ project adheres to [Semantic Versioning].
 
   + Otherwise, a GUI version of Vim must be used.
 
+[Unreleased]: https://github.com/ludokng/vim-odyssey/compare/0.4.0...HEAD
 [0.4.0]: https://github.com/ludokng/vim-odyssey/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/ludokng/vim-odyssey/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/ludokng/vim-odyssey/compare/0.1.0...0.2.0

@@ -283,6 +283,8 @@ call s:l(         'javaOdysseyLombok',       'Statement')
 call s:l(      'javaOdysseyEnumValue',        'Constant')
 call s:l('javaOdysseyEnumConstructor',        'Constant')
 
+let g:java_ignore_javadoc = 1
+
 " }}}
 " Ruby Highlights {{{
 

@@ -8,12 +8,12 @@ project adheres to [Semantic Versioning].
 ### Added
 
 - It adds three Java syntax groups in order to be able to fold multiline
-  comments, 'import' statement blocks and 'import static' statement blocks.
+  comments, `import` statement blocks and `import static` statement blocks.
 
 ### Changed
 
-- The highlighting of the Javadoc is prevent by default. If the user wants to
-  enable it, the following must be added to the `.vimrc` file:
+- The highlighting of the Javadoc is prevented by default. If the user wants to
+  enable it, the following lines must be added to the `.vimrc` file:
 
   ```
   let g:odyssey_java_javadoc = 1
@@ -35,7 +35,7 @@ project adheres to [Semantic Versioning].
 
 ### Fixed
 
-- Fix the Java highlight for nested class names in 'import' statements.
+- Fix the Java highlight for nested class names in `import` statements.
 
 ## [0.4.0] - 2019-08-02
 

@@ -12,6 +12,17 @@ project adheres to [Semantic Versioning].
 
 ### Changed
 
+- The highlighting of the Javadoc is prevent by default. If the user wants to
+  enable it, the following must be added to the `.vimrc` file:
+
+  ```
+  let g:odyssey_java_javadoc = 1
+  colorscheme odyssey
+  ```
+
+  *Note*: `g:odyssey_java_javadoc` must be different from `0` to enable the
+          highlighting of the Javadoc.
+
 - Change the name of some of the Java syntax group added by the plugin.
 
   + `javaOdysseyImport` becomes `javaOdysseyGetClass`,

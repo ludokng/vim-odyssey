@@ -5,7 +5,12 @@ project adheres to [Semantic Versioning].
 
 ## [Unreleased]
 
-## Changed
+### Added
+
+- It adds three Java syntax groups in order to be able to fold multiline
+  comments, 'import' statement blocks and 'import static' statement blocks.
+
+### Changed
 
 - Change the name of some of the Java syntax group added by the plugin.
 
@@ -17,7 +22,7 @@ project adheres to [Semantic Versioning].
 
   + `javaOdysseyDottedClass` becomes `javaOdysseyDotOperator`.
 
-## Fixed
+### Fixed
 
 - Fix the Java highlight for nested class names in 'import' statements.
 

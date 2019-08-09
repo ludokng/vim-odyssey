@@ -283,7 +283,13 @@ call s:l(         'javaOdysseyLombok',       'Statement')
 call s:l(      'javaOdysseyEnumValue',        'Constant')
 call s:l('javaOdysseyEnumConstructor',        'Constant')
 
-let g:java_ignore_javadoc = 1
+if exists('g:odyssey_java_javadoc') && g:odyssey_java_javadoc != 0
+  if exists('g:java_ignore_javadoc')
+    unlet g:java_ignore_javadoc
+  end
+else
+  let g:java_ignore_javadoc = 1
+endif
 
 " }}}
 " Ruby Highlights {{{

@@ -44,6 +44,9 @@ syntax match   javaOdysseyGetStaticMethod "\%(\<import\>\s\+\<static\>\s\+\%(\w\
 syntax match   javaOdysseyGetStaticClass  "\%(\<import\>\s\+\<static\>\s\+\%(\w\+\.\)\+\)\@<=\%(\u\w*\)\%(\s*;\)\@="
 syntax match   javaOdysseyExtends         "\%(\<extends\>\s\+\)\@<=\%(\<\u\w*\>\)\%(<\%(\u\w*\|,\|\s\|<\|>\)*>\)\=" contains=javaOdysseyGeneric,javaOdysseySeparator
 syntax match   javaOdysseyImplements      "\%(\<implements\>\s\+\)\@<=\%(\<\u\w*\>\)\%(<\%(\u\w*\|,\|\s\|<\|>\)*>\)\=" contains=javaOdysseyGeneric,javaOdysseySeparator
+syntax region  javaOdysseyComment         start=+/\*+ end=+\*/+ transparent fold keepend
+syntax region  javaOdysseyImport          start=/\%(^import\)\@<=\s.\+;/ end=+^\s*$+ transparent fold keepend
+syntax region  javaOdysseyImportStatic    start=/\%(^import static\)\@<=\s.\+;/ end=+^\s*$+ transparent fold keepend
 
 " }}}
 " vim: foldmethod=marker

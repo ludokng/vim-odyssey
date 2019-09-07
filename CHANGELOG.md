@@ -7,7 +7,10 @@ project adheres to [Semantic Versioning].
 
 ### Added
 
-- It adds three Java syntax groups in order to be able to fold multiline
+- Add the support for the Java method references by using the `Type` and
+  `Function` highlight groups.
+
+- Adds three Java syntax groups in order to be able to fold multiline
   comments, `import` statement blocks and `import static` statement blocks.
 
 ### Changed

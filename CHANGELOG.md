@@ -17,6 +17,9 @@ project adheres to [Semantic Versioning].
 
   + Some new syntax groups for types and functions have been added.
 
+- Add the support for the Java method references by using the `Type` and
+  `Function` highlight groups.
+
 - Adds three Java syntax groups in order to be able to fold multiline
   comments, `import` statement blocks and `import static` statement blocks.
 

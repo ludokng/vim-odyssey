@@ -282,6 +282,8 @@ call s:l(          'javaOdysseyArrow',        'Operator')
 call s:l(         'javaOdysseyLombok',       'Statement')
 call s:l(      'javaOdysseyEnumValue',        'Constant')
 call s:l('javaOdysseyEnumConstructor',        'Constant')
+call s:l(      'javaOdysseyMethodRef',        'Function')
+call s:l( 'javaOdysseyClassMethodRef',            'Type')
 
 if exists('g:odyssey_java_javadoc') && g:odyssey_java_javadoc != 0
   if exists('g:java_ignore_javadoc')

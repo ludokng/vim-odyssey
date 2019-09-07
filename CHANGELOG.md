@@ -7,7 +7,17 @@ project adheres to [Semantic Versioning].
 
 ### Added
 
-- It adds three Java syntax groups in order to be able to fold multiline
+- Adds some supports for the Rust programming language:
+
+  + Some already existing syntax groups have been cleared to provide
+    highlighting only for important items.
+
+  + Some syntax groups have been linked to other highlight groups to beautify
+    the code.
+
+  + Some new syntax groups for types and functions have been added.
+
+- Adds three Java syntax groups in order to be able to fold multiline
   comments, `import` statement blocks and `import static` statement blocks.
 
 ### Changed

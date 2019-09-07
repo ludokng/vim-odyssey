@@ -303,4 +303,10 @@ call s:l('rubyInterpolationDelimiter',   'Function')
 call s:l(       'rubyStringDelimiter',   'Constant')
 
 " }}}
+" Rust Highlights {{{
+call s:l(       'rustLifetime', 'Constant')
+call s:l(   'rustQuestionMark', 'Operator')
+call s:l('rustOdysseyFunction', 'Function')
+call s:l(    'rustOdysseyType', 'Type')
+" }}}
 " vim: foldmethod=marker

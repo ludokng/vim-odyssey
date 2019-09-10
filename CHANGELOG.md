@@ -48,6 +48,9 @@ project adheres to [Semantic Versioning].
 
 ### Fixed
 
+- Fix the Java highlight for the `val` keyword within lambdas bodies. This fix
+  should also have fix the highlight of `val` in other snippets of Java code.
+
 - Fix the Java highlight for nested class names in `import` statements.
 
 ## [0.4.0] - 2019-08-02

@@ -49,6 +49,7 @@ syntax match   javaOdysseyClassMethodRef  "\<\u\w*\>::"me=e-2 containedin=javaPa
 syntax region  javaOdysseyComment         start=+/\*+ end=+\*/+ transparent fold keepend
 syntax region  javaOdysseyImport          start=/\%(^import\)\@<=\s.\+;/ end=+^\s*$+ transparent fold keepend
 syntax region  javaOdysseyImportStatic    start=/\%(^import static\)\@<=\s.\+;/ end=+^\s*$+ transparent fold keepend
+syntax cluster javaTop                    add=javaOdysseyLombok
 
 " }}}
 " vim: foldmethod=marker

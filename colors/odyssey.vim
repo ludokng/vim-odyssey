@@ -294,6 +294,17 @@ else
 endif
 
 " }}}
+" Python Highlights {{{
+
+call s:h(      'pythonDecorator', 'background', 'warning', 'italic')
+call s:h(  'pythonDecoratorName', 'background', 'warning', 'italic')
+call s:l(        'pythonInclude',  'Statement')
+call s:l('pythonOdysseyFunction',   'Function')
+call s:l(    'pythonOdysseySelf',    'Special')
+call s:l(    'pythonOdysseyType',       'Type')
+call s:l(   'pythonOdysseyClass',       'Type')
+
+" }}}
 " Ruby Highlights {{{
 
 call s:l(                 'rubyClass',  'Statement')
@@ -309,6 +320,6 @@ call s:l(       'rubyStringDelimiter',   'Constant')
 call s:l(       'rustLifetime', 'Constant')
 call s:l(   'rustQuestionMark', 'Operator')
 call s:l('rustOdysseyFunction', 'Function')
-call s:l(    'rustOdysseyType', 'Type')
+call s:l(    'rustOdysseyType',     'Type')
 " }}}
 " vim: foldmethod=marker

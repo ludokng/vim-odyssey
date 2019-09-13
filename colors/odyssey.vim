@@ -298,11 +298,17 @@ endif
 
 call s:h(      'pythonDecorator', 'background', 'warning', 'italic')
 call s:h(  'pythonDecoratorName', 'background', 'warning', 'italic')
+call s:l(    'pythonOdysseyNone',   'Constant')
+call s:l( 'pythonOdysseyBoolean',   'Constant')
+call s:l( 'pythonOdysseyBuiltin',       'Type')
+call s:l(   'pythonOdysseyPrint',   'Function')
 call s:l(        'pythonInclude',  'Statement')
 call s:l('pythonOdysseyFunction',   'Function')
 call s:l(    'pythonOdysseySelf',    'Special')
 call s:l(    'pythonOdysseyType',       'Type')
 call s:l(   'pythonOdysseyClass',       'Type')
+
+let g:python_no_builtin_highlight = 1
 
 " }}}
 " Ruby Highlights {{{

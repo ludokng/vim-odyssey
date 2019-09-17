@@ -7,7 +7,17 @@ project adheres to [Semantic Versioning].
 
 ### Added
 
-- Adds some supports for the Rust programming language:
+- Add some supports for the Python programming language. The use of highlights
+  for builtin elements have been disabled by the instruction:
+
+  ```
+  let g:python_no_builtin_highlight = 1
+  ```
+
+  Plus, The `print` function is considered to be a function and not a
+  statement. It means that there is no support for Python 2 `print` statement.
+
+- Add some supports for the Rust programming language:
 
   + Some already existing syntax groups have been cleared to provide
     highlighting only for important items.
@@ -20,7 +30,7 @@ project adheres to [Semantic Versioning].
 - Add the support for the Java method references by using the `Type` and
   `Function` highlight groups.
 
-- Adds three Java syntax groups in order to be able to fold multiline
+- Add three Java syntax groups in order to be able to fold multiline
   comments, `import` statement blocks and `import static` statement blocks.
 
 ### Changed
@@ -34,7 +44,7 @@ project adheres to [Semantic Versioning].
   ```
 
   *Note*: `g:odyssey_java_javadoc` must be different from `0` to enable the
-          highlighting of the Javadoc.
+  highlighting of the Javadoc.
 
 - Change the name of some of the Java syntax group added by the plugin.
 

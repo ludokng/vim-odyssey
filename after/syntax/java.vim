@@ -17,7 +17,7 @@
 "   - Import statements ('import' and 'import static').
 "
 " Maintainer: Ludovic Koenig <ludovic.koenig@gmail.com>
-" Version: 0.4.0
+" Version: 0.5.0
 " Since: 0.4.0
 " License: MIT
 "

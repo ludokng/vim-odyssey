@@ -2,18 +2,11 @@
 
 Odyssey is a dark green colorscheme for Vim.
 
+## Features
+
 ## Installation
 
 ### Downloading the plugin
-
-#### Using `./vim/colors/`
-
-Copy the file `./vim-odyssey/colors/odyssey.vim` under the repertory
-`./vim/colors`.
-  ```zsh
-  git clone https://github.com/ludokng/vim-odyssey.git vim-odyssey/
-  cp vim-odyssey/colors/odyssey.vim ~/.vim/colors/
-  ```
 
 #### Using [pathogen.vim]
 
@@ -21,6 +14,16 @@ After having installed [pathogen.vim], clone the repository under
 `./vim/bundle`.
   ```zsh
   cd ~/.vim/bundle/
+  git clone https://github.com/ludokng/vim-odyssey.git vim-odyssey/
+  ```
+
+#### Using Vim 8 native package manager
+
+Clone the repository under `.vim/pack/vim-odyssey/start/`.
+  ```zsh
+  cd ~/.vim/pack/
+  mkdir -p vim-odyssey/start/
+  cd vim-odyssey/start/
   git clone https://github.com/ludokng/vim-odyssey.git vim-odyssey/
   ```
 

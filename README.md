@@ -27,6 +27,9 @@ Clone the repository under `.vim/pack/vim-odyssey/start/`.
   git clone https://github.com/ludokng/vim-odyssey.git vim-odyssey/
   ```
 
+*Note*: The first `vim-odyssey` directory name is arbitrary as specified in the
+        Vim documentation.
+
 ### Updating the `./vimrc`
 
 Add the following to the `./vimrc` file.

@@ -320,7 +320,10 @@ call s:l(                'rubyDefine',  'Statement')
 call s:l(               'rubyInclude',  'Statement')
 call s:h(      'rubyInstanceVariable', 'background',  'warning', 'italic')
 call s:l('rubyInterpolationDelimiter',   'Function')
-call s:l(       'rubyStringDelimiter',   'Constant')
+call s:l(       'rubyStringDelimiter',   'Function')
+call s:l(                'rubyAccess',   'Statement')
+call s:l(             'rubyAttribute',   'Statement')
+call s:l(        'rubyPseudoVariable',   'Special')
 
 " }}}
 " Rust Highlights {{{

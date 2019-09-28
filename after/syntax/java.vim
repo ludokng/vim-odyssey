@@ -52,4 +52,4 @@ syntax region  javaOdysseyImportStatic    start=/\%(^import static\)\@<=\s.\+;/ 
 syntax cluster javaTop                    add=javaOdysseyLombok
 
 " }}}
-" vim: foldmethod=marker
+" vim: foldmethod=marker textwidth=79 colorcolumn=+1

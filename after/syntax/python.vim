@@ -35,4 +35,4 @@ syntax keyword pythonStatement       class nextgroup=pythonOdysseyClass skipwhit
 syntax match   pythonOdysseyClass    "\<\u\w*\>"
 
 " }}}
-" vim: foldmethod=marker
+" vim: foldmethod=marker textwidth=79 colorcolumn=+1

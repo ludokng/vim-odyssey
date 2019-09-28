@@ -23,4 +23,4 @@
 syntax keyword rubyOdysseyNil nil
 
 " }}}
-" vim: foldmethod=marker
+" vim: foldmethod=marker textwidth=79 colorcolumn=+1

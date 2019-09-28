@@ -37,4 +37,4 @@ syntax match rustOdysseyFunction "\<\l\w*\>\%(\%(<\%(\w\|,\|'\|\s\)*>\)\=(\)\@="
 syntax match rustOdysseyType     "\<\u\w*\>"
 
 " }}}
-" vim: foldmethod=marker
+" vim: foldmethod=marker textwidth=79 colorcolumn=+1

@@ -340,4 +340,4 @@ call s:l('rustOdysseyFunction', 'Function')
 call s:l(    'rustOdysseyType',     'Type')
 
 " }}}
-" vim: foldmethod=marker
+" vim: foldmethod=marker textwidth=79 colorcolumn=+1

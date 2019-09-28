@@ -314,19 +314,30 @@ let g:python_no_builtin_highlight = 1
 " }}}
 " Ruby Highlights {{{
 
-call s:l(                 'rubyClass',  'Statement')
-call s:h(         'rubyClassVariable', 'background',  'warning', 'italic')
-call s:l(                'rubyDefine',  'Statement')
-call s:l(               'rubyInclude',  'Statement')
-call s:h(      'rubyInstanceVariable', 'background',  'warning', 'italic')
-call s:l('rubyInterpolationDelimiter',   'Function')
-call s:l(       'rubyStringDelimiter',   'Constant')
+call s:l(                 'rubyClass',    'Statement')
+call s:h(         'rubyClassVariable',   'background', 'warning', 'italic')
+call s:l(                'rubyDefine',    'Statement')
+call s:l(               'rubyInclude',    'Statement')
+call s:h(      'rubyInstanceVariable',   'background', 'warning', 'italic')
+call s:l('rubyInterpolationDelimiter',     'Function')
+call s:l(       'rubyStringDelimiter',       'Normal')
+call s:l(                'rubyAccess',    'Statement')
+call s:l(             'rubyAttribute',    'Statement')
+call s:l(        'rubyPseudoVariable',      'Special')
+call s:l(                'rubySymbol', 'rubyConstant')
+call s:h(        'rubyBlockParameter',   'background', 'procedure', 'italic')
+call s:l(            'rubyOdysseyNil',       'Normal')
+call s:l(               'rubyBoolean',       'Normal')
+call s:l(                 'rubyFloat',       'Normal')
+call s:l(               'rubyInteger',       'Normal')
 
 " }}}
 " Rust Highlights {{{
+
 call s:l(       'rustLifetime', 'Constant')
 call s:l(   'rustQuestionMark', 'Operator')
 call s:l('rustOdysseyFunction', 'Function')
 call s:l(    'rustOdysseyType',     'Type')
+
 " }}}
 " vim: foldmethod=marker

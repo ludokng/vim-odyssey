@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
 
+## [Unreleased]
+
+### Changed
+
+- Changed the color scheme for Ruby files:
+
+  + Ruby booleans, 'nil', numbers and string delimitiers are using the `Normal`
+    syntax group.
+
+  + `rubySymbol` are relinked to `rubyConstant`.
+
+  + Some Ruby keywords are relinked to `Statement` to make the scheme more
+    coherent.
+
 ## [0.5.0] - 2019-09-17
 
 ### Added
@@ -203,6 +217,7 @@ project adheres to [Semantic Versioning].
 
   + Otherwise, a GUI version of Vim must be used.
 
+[Unreleased]: https://github.com/ludokng/vim-odyssey/compare/0.5.0...HEAD
 [0.5.0]: https://github.com/ludokng/vim-odyssey/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/ludokng/vim-odyssey/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/ludokng/vim-odyssey/compare/0.2.0...0.3.0

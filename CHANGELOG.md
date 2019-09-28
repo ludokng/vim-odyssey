@@ -5,6 +5,11 @@ project adheres to [Semantic Versioning].
 
 ## [Unreleased]
 
+### Added
+
+- Add some support for the Go language. It mainly deals with the highlight of
+  function/method calls and declarations.
+
 ### Changed
 
 - Changed the color scheme for Ruby files:

@@ -257,6 +257,12 @@ call s:h(       'Error', 'background',      'error',      'bold')
 call s:h(        'Todo', 'background',    'warning',      'bold')
 
 " }}}
+" Go Highlights {{{
+
+call s:l(   'goOdysseyFunction',  'Function')
+call s:l('goOdysseyFuncKeyword', 'Statement')
+
+" }}}
 " Java Highlights {{{
 
 call s:h(            'javaAnnotation',      'background', 'warning', 'italic')

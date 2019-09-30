@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
 
+## [1.0.0] - 2019-09-30
+
+### Added
+
+- Add a 'Features' section to the README to list and describe the main features
+  of the color scheme.
+
 ## [0.7.0] - 2019-09-30
 
 ### Added

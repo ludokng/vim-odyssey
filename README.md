@@ -4,6 +4,15 @@ Odyssey is a dark green colorscheme for Vim.
 
 ## Features
 
+Odyssey is a dark theme for Vim which provides the following features:
+
+  + A color scheme based on 12 colors.
+
+  + Support for 256-color terminals, 24-bits color terminals and GUI.
+
+  + A better syntax for the following programming languages: Go, Java,
+    JavaScript, Python, Ruby and Rust.
+
 ## Installation
 
 ### Downloading the plugin

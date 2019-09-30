@@ -12,6 +12,13 @@ project adheres to [Semantic Versioning].
 
 ### Changed
 
+- Changed the syntax groups used to match Java enum values:
+
+  + `javaOdysseyEnumConstructor` has been removed.
+
+  + `javaOdysseyEnumValue` does now match all uppercase words and it is linked
+    to the `Type` highlight group.
+
 - Changed the color scheme for Ruby files:
 
   + Ruby booleans, 'nil', numbers and string delimitiers are using the `Normal`

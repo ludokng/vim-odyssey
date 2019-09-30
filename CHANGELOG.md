@@ -3,12 +3,16 @@
 All notable changes to this project will be documented in this file. This
 project adheres to [Semantic Versioning].
 
-## [0.6.0] - 2019-09-30
+## [0.7.0] - 2019-09-30
 
 ### Added
 
 - Add some support for the JavaScript language. It mainly deals with the
   highlight of function/method calls and declarations.
+
+## [0.6.0] - 2019-09-30
+
+### Added
 
 - Add some support for the Go language. It mainly deals with the highlight of
   function/method calls and declarations.
@@ -232,6 +236,7 @@ project adheres to [Semantic Versioning].
 
   + Otherwise, a GUI version of Vim must be used.
 
+[0.7.0]: https://github.com/ludokng/vim-odyssey/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/ludokng/vim-odyssey/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/ludokng/vim-odyssey/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/ludokng/vim-odyssey/compare/0.3.0...0.4.0

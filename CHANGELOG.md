@@ -7,6 +7,9 @@ project adheres to [Semantic Versioning].
 
 ### Added
 
+- Add some support for the JavaScript language. It mainly deals with the
+  highlight of function/method calls and declarations.
+
 - Add some support for the Go language. It mainly deals with the highlight of
   function/method calls and declarations.
 

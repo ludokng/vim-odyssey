@@ -300,6 +300,16 @@ else
 endif
 
 " }}}
+" JavaScript Highlights {{{
+
+call s:l(       'javaScriptFunction', 'Statement')
+call s:l(         'javaScriptBraces',    'Normal')
+call s:l(     'javaScriptIdentifier', 'Statement')
+call s:l( 'javaScriptOdysseyKeyword',   'Keyword')
+call s:l('javaScriptOdysseyFunction',  'Function')
+call s:l('javaScriptOdysseyFatArrow', 'Statement')
+
+" }}}
 " Python Highlights {{{
 
 call s:h(      'pythonDecorator', 'background', 'warning', 'italic')

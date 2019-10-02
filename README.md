@@ -13,6 +13,12 @@ Odyssey is a dark theme for Vim which provides the following features:
   + A better syntax for the following programming languages: Go, Java,
     JavaScript, Python, Ruby and Rust.
 
+## Visuals
+
+This is a little screenshot to see the color scheme in action:
+
+![ProductDeleteButton](.assets/visual.png)
+
 ## Installation
 
 ### Downloading the plugin
@@ -68,5 +74,12 @@ Add the following to the `./vimrc` file.
 ## License
 
 Odyssey for Vim is distributed under the terms of the MIT license.
+
+## Project Status
+
+This project was a one-shot project. It is no more under development, but the
+color scheme is completely useable and has been used during its development.
+Some issues may be addressed if there are bugs. However existing features will
+not be changed and no additional ones are planned.
 
 [pathogen.vim]:  https://github.com/tpope/vim-pathogen
